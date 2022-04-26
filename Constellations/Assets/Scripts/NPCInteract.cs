@@ -18,21 +18,20 @@ public class NPCInteract : MonoBehaviour
                 whenInteracted.Invoke();
             }
         }
+
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Plaayer"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             inRange = true;
-            Debug.Log("Player inside");
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Plaayer"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             inRange = false;
-            Debug.Log("Player outside");
         }
     }
 }
