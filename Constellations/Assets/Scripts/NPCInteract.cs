@@ -5,17 +5,17 @@ using UnityEngine.Events;
 
 public class NPCInteract : MonoBehaviour
 {
-    public bool inRange;
-    public KeyCode interact;
+    bool inRange;
     public UnityEvent whenInteracted;
-
+    public GameObject player;
     void Update()
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(interact))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 whenInteracted.Invoke();
+                player.GetComponent<PlayerController>().enabled = false;
             }
         }
 
