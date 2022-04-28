@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     public float _mSpeed;
     Animator playerAnimator;
 
-    public int GoldKey;
-    public int CloverPendant;
+    public int StarKey;
+    public int CloverPendant = 1;
     public int CloverLeaf;
     
     void Start()
