@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<Sprite> icons;
 
     public Animator DiagBox;
+    public bool IsDone;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void StartDialogue(Dialogue dialogue)
     {
+        IsDone = false;
         DiagBox.SetBool("IsOpen", true);
         sentences.Clear();
         names.Clear();
@@ -64,9 +66,10 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
     }
-    void EndDialogue()
+    public void EndDialogue()
     {
         player.GetComponent<PlayerController>().enabled = true;
         DiagBox.SetBool("IsOpen", false);
+        IsDone = true;
     }
 }

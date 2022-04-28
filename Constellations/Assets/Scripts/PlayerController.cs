@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimator = GetComponent<Animator>();
     }
-
     void Update()
     {
         ControlPlayer();

@@ -249,10 +249,10 @@ MonoBehaviour:
   whenInteracted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2111021760}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -305,8 +305,6 @@ GameObject:
   - component: {fileID: 230552513}
   - component: {fileID: 230552512}
   - component: {fileID: 230552510}
-  - component: {fileID: 230552507}
-  - component: {fileID: 230552508}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -426,44 +424,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230552501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.581411, y: -1.9096525, z: 5.3726225}
+  m_LocalPosition: {x: 5.581411, y: -1.9096525, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1793777278}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &230552507
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230552501}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -5.079006, y: 16.871862}
-  m_Size: {x: 0.984745, y: 0.984745}
-  m_Direction: 0
---- !u!114 &230552508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230552501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040cfd4fc909fb4438afbb088e930a3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  whenInteracted:
-    m_PersistentCalls:
-      m_Calls: []
-  player: {fileID: 1849781526}
 --- !u!61 &230552510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -647,7 +613,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 6112890488319390909, guid: 5547e92425a5b584ba72bba3566474f0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -668,7 +634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251654073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5049756, y: -1.0154996, z: 18.795109}
+  m_LocalPosition: {x: 0.5049756, y: -1.0154996, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1376212433}
@@ -700,7 +666,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 251654073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82d5a03252ce80642a36272426df89b2, type: 3}
+  m_Script: {fileID: 11500000, guid: e9adba12cca3d7b4792baf4352206e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
@@ -796,6 +762,10 @@ MonoBehaviour:
     - '*Janus joined the party*
 
       *A path has opened*'
+  manager: {fileID: 464274570}
+  Janus: {fileID: 251654073}
+  JanusInteractZone: {fileID: 1376212432}
+  Gates: {fileID: 2111021758}
 --- !u!114 &251654079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,9 +778,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44065190c03d65944bbbea6d3035d31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.6
+  speed: 3
   player: {fileID: 1849781529}
-  offset: {x: 0.3, y: 0.8, z: 0}
+  offset: {x: 0.5, y: 0.8, z: 0}
 --- !u!1 &269643884
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,10 +828,10 @@ MonoBehaviour:
   whenInteracted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1693830406}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1217,6 +1187,7 @@ MonoBehaviour:
   dialogueText: {fileID: 108995362}
   NPCIco: {fileID: 1353818303}
   DiagBox: {fileID: 504258958}
+  IsDone: 0
 --- !u!4 &464274571
 Transform:
   m_ObjectHideFlags: 0
@@ -1242,6 +1213,7 @@ GameObject:
   - component: {fileID: 487633631}
   - component: {fileID: 487633632}
   - component: {fileID: 487633633}
+  - component: {fileID: 487633634}
   m_Layer: 0
   m_Name: Treant
   m_TagString: Untagged
@@ -1257,7 +1229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487633630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.51, y: 13.8, z: 0}
+  m_LocalPosition: {x: 0.51, y: 13.8, z: 20}
   m_LocalScale: {x: 3, y: 3, z: 2.5}
   m_Children:
   - {fileID: 701279781}
@@ -1303,7 +1275,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 06a287cc97cb64df8a11af10f2352365, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1341,6 +1313,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46235555, y: 0.45573366}
   m_EdgeRadius: 0
+--- !u!114 &487633634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487633630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d5a03252ce80642a36272426df89b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    NPCName:
+    - Treant
+    - Rigel
+    NPCSprite:
+    - {fileID: 21300000, guid: 06a287cc97cb64df8a11af10f2352365, type: 3}
+    - {fileID: 21300000, guid: 06a287cc97cb64df8a11af10f2352365, type: 3}
+    sentences:
+    - A visitor? I haven't had any visitors for a long time!
+    - A visitor? I haven't had any visitors for a long time!
 --- !u!1 &504258956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,15 +1522,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2036784704}
+  m_Children: []
   m_Father: {fileID: 504258957}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148, y: -194.4}
-  m_SizeDelta: {x: 51.55, y: 22.71}
+  m_AnchoredPosition: {x: 163.9, y: -194.2}
+  m_SizeDelta: {x: 20.51, y: 14.947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &599823193
 MonoBehaviour:
@@ -1614,7 +1607,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efee20b64d1e73942a29ba61ce3379c3, type: 3}
+  m_Sprite: {fileID: -4296635770777405670, guid: 1c9bc0d104c01934da10d4333b9dc48b,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1744,7 +1738,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 701279780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922568a1515f7754988f116645434a17, type: 3}
+  m_Script: {fileID: 11500000, guid: 040cfd4fc909fb4438afbb088e930a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   whenInteracted:
@@ -1834,6 +1828,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1015042880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015042881}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1015042881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015042880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.52, y: 15.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1520204690}
+  m_Father: {fileID: 1261082205}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1022419539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,6 +4415,7 @@ Transform:
   - {fileID: 2111021759}
   - {fileID: 1693830405}
   - {fileID: 713780841}
+  - {fileID: 1015042881}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4549,7 +4575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300008, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4761,7 +4787,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 251654078}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: JanusTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
@@ -4979,6 +5005,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451796411}
   m_CullTransparentMesh: 1
+--- !u!1 &1520204689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1520204690}
+  - component: {fileID: 1520204691}
+  m_Layer: 0
+  m_Name: InteractRadius
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1520204690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520204689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1015042881}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1520204691
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520204689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.030225754}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0604515}
+  m_EdgeRadius: 0
 --- !u!1 &1537335267
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,6 +5173,7 @@ GameObject:
   - component: {fileID: 1693830405}
   - component: {fileID: 1693830404}
   - component: {fileID: 1693830403}
+  - component: {fileID: 1693830406}
   m_Layer: 0
   m_Name: Note
   m_TagString: Untagged
@@ -5183,13 +5267,36 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693830402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48402438, y: 5.0015, z: 14.492088}
+  m_LocalPosition: {x: -0.48402438, y: 5.0015, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 269643885}
   m_Father: {fileID: 1261082205}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1693830406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693830402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d5a03252ce80642a36272426df89b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    NPCName:
+    - Rigel
+    - Note
+    NPCSprite:
+    - {fileID: 21300010, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
+    - {fileID: -2925288176213767688, guid: 20d6cce5c7ac33b4e97f0f98a09aa347, type: 3}
+    sentences:
+    - There a not on the table.....
+    - The Tree can't tell shapes nor feel things; only she can see colors she wants
+      to have.
 --- !u!1 &1727988682
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,7 +5722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849781526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5159756, y: -2.94, z: 18.795109}
+  m_LocalPosition: {x: 0.5159756, y: -2.94, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1276075776}
@@ -5684,85 +5791,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7572969, y: 1.006816}
   m_EdgeRadius: 0
---- !u!1 &2036784703
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2036784704}
-  - component: {fileID: 2036784706}
-  - component: {fileID: 2036784705}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2036784704
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036784703}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 599823192}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2036784705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036784703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 2d040b1040b12644dbfd6de09f5b5408, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: '>'
---- !u!222 &2036784706
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036784703}
-  m_CullTransparentMesh: 1
 --- !u!1 &2111021758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5772,6 +5800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111021759}
+  - component: {fileID: 2111021760}
   m_Layer: 0
   m_Name: Gates
   m_TagString: Untagged
@@ -5787,7 +5816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111021758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.72865725, y: 2.0982893, z: 6.8074913}
+  m_LocalPosition: {x: -0.72865725, y: 2.0982893, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1354902130}
@@ -5797,3 +5826,24 @@ Transform:
   m_Father: {fileID: 1261082205}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111021760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111021758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d5a03252ce80642a36272426df89b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    NPCName:
+    - Gate
+    NPCSprite:
+    - {fileID: -2925288176213767688, guid: 20d6cce5c7ac33b4e97f0f98a09aa347, type: 3}
+    sentences:
+    - 'There seems to be some kind of
+
+      magical barrier blocking the path'
