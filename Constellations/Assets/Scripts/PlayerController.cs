@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     public float _mSpeed;
     Animator playerAnimator;
 
+    public int GoldKey;
+    public int CloverPendant;
+    public int CloverLeaf;
     
     void Start()
     {
@@ -14,6 +17,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
+    {
+        ControlPlayer();
+    }
+    void ControlPlayer()
     {
         Vector2 direction = Vector2.zero;
 
@@ -43,5 +50,6 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetBool("IsMoving", direction.magnitude > 0);
 
         GetComponent<Rigidbody2D>().velocity = _mSpeed * direction;
+
     }
 }
