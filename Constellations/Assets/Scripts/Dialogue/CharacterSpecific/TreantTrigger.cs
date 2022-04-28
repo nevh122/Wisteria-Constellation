@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreantTrigger : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class TreantTrigger : MonoBehaviour
 
     private int encounter;
     private bool thisScript;
+    private bool isDead;
 
     private void Start()
     {
@@ -29,20 +31,25 @@ public class TreantTrigger : MonoBehaviour
         PlayerChoices();
         ChoiceYes();
         ChoiceNo();
+        PlayerDead();
     }
     public void TriggerEncounter()
     {
-        thisScript = true;
+        thisScript = false;
         manager.IsDone = false;
+        choiceMngr.IsDone = false;
+
         switch (encounter)
         {
             case 0:
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogueFirstEncounter);
                 encounter = 1;
                 CloverLeafIndicator.SetActive(true);
+                thisScript = true;
                 break;
             case 1:
                 FindObjectOfType<DialogueManager>().StartDialogue(returnToTreant);
+                thisScript = true;
                 break;
             case 2:
                 FindObjectOfType<DialogueManager>().StartDialogue(EndOfDialogue);
@@ -59,10 +66,13 @@ public class TreantTrigger : MonoBehaviour
             {
                 case 1:
                     FindObjectOfType<TreantChoiceManager>().StartChoices(WithCloverLeaf);
-                    encounter = 2;
+                    thisScript = true;
+                    choiceMngr.IsDone = true;
                     break;
                 case 0:
                     FindObjectOfType<TreantChoiceManager>().StartChoices(WithoutCloverLeaf);
+                    thisScript = true;
+                    choiceMngr.IsDone = true;
                     break;
                 default: break;
             }
@@ -76,13 +86,16 @@ public class TreantTrigger : MonoBehaviour
             {
                 case 1:
                     FindObjectOfType<DialogueManager>().StartDialogue(YesCloverLeaf);
+                    encounter = 2;
                     choiceMngr.IsDone = false;
                     thisScript = false;
+                    player.StarKey =+ 1;
                     break;
                 case 0:
                     FindObjectOfType<DialogueManager>().StartDialogue(YesCloverPendant);
                     choiceMngr.IsDone = false;
                     thisScript = false;
+                    isDead = true;
                     break;
                 default: break;
             }
@@ -96,6 +109,14 @@ public class TreantTrigger : MonoBehaviour
             choiceMngr.IsDone = false;
             thisScript = false;
         }
+    }
+    public void PlayerDead()
+    {
+        if (isDead == true && manager.IsDone == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
     }
 }
 
