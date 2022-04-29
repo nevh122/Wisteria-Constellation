@@ -10,7 +10,6 @@ public class JanusTrigger : MonoBehaviour
     public GameObject Janus;
     public GameObject JanusInteractZone;
     bool thisScript = false;
-    public GameObject Gates;
 
     public void TriggerDialogue()
     {
@@ -25,9 +24,7 @@ public class JanusTrigger : MonoBehaviour
             Janus.GetComponent<CircleCollider2D>().enabled = false;
             Janus.GetComponent<FollowPlayer>().enabled = true;
             JanusInteractZone.SetActive(false);
-            Gates.SetActive(false);
 
-            
         }
     }
 }
