@@ -17,7 +17,7 @@ public class DoorInteract : MonoBehaviour
     }
     public void TriggerDialogue()
     {
-        switch (player.StarKey)
+        switch (player.MoonKey)
         {
             case 0:
                 FindObjectOfType<DialogueManager>().StartDialogue(NoKey);

@@ -12,7 +12,6 @@ public class TeleportInteract : MonoBehaviour
     {
         if (inRange)
         {
-
             whenInteracted.Invoke();
         }
 

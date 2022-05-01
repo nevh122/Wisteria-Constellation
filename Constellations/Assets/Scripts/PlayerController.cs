@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public int StarKey;
     public int CloverPendant = 1;
     public int CloverLeaf;
+    public int MoonKey;
     
     void Start()
     {
