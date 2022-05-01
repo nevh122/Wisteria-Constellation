@@ -6,6 +6,7 @@ public class JanusTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public DialogueManager manager;
+    public PlayerController player;
 
     public GameObject Janus;
     public GameObject JanusInteractZone;
@@ -24,6 +25,7 @@ public class JanusTrigger : MonoBehaviour
             Janus.GetComponent<CircleCollider2D>().enabled = false;
             Janus.GetComponent<FollowPlayer>().enabled = true;
             JanusInteractZone.SetActive(false);
+            player.withJanus += 1;
 
         }
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TreantTrigger : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class TreantTrigger : MonoBehaviour
     public DialogueManager manager;
     public TreantChoiceManager choiceMngr;
     public GameObject CloverLeafIndicator;
+    public Text inventory;
 
     private int encounter;
     private bool thisScript;
@@ -90,6 +92,7 @@ public class TreantTrigger : MonoBehaviour
                     choiceMngr.IsDone = false;
                     thisScript = false;
                     player.StarKey =+ 1;
+                    inventory.text = inventory.text + "\n- Star Key";
                     break;
                 case 0:
                     FindObjectOfType<DialogueManager>().StartDialogue(YesCloverPendant);
