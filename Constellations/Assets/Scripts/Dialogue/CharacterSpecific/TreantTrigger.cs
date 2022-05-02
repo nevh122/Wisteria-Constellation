@@ -17,7 +17,6 @@ public class TreantTrigger : MonoBehaviour
     public PlayerController player;
     public DialogueManager manager;
     public TreantChoiceManager choiceMngr;
-    public GameObject CloverLeafIndicator;
     public Text inventory;
 
     private int encounter;
@@ -46,7 +45,6 @@ public class TreantTrigger : MonoBehaviour
             case 0:
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogueFirstEncounter);
                 encounter = 1;
-                CloverLeafIndicator.SetActive(true);
                 thisScript = true;
                 break;
             case 1:

@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<Sprite> icons;
 
     public Animator DiagBox;
-    public bool IsDone;
+    public bool IsDone = true;
 
     void Start()
     {
@@ -21,13 +21,24 @@ public class DialogueManager : MonoBehaviour
         names = new Queue<string>();
         icons = new Queue<Sprite>();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DisplayNextDialogue();
+        }
+    }
     public void StartDialogue(Dialogue dialogue)
     {
+
         IsDone = false;
-        DiagBox.SetBool("IsOpen", true);
         sentences.Clear();
         names.Clear();
         icons.Clear();
+
+        DiagBox.SetBool("IsOpen", true);
+        player.GetComponent<PlayerController>().enabled = false;
         foreach (string name in dialogue.NPCName)
         {
             names.Enqueue(name);
@@ -44,7 +55,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void DisplayNextDialogue()
     {
-        if(sentences.Count == 0)
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;

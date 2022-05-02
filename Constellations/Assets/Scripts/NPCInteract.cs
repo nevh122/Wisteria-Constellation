@@ -8,23 +8,28 @@ public class NPCInteract : MonoBehaviour
     bool inRange;
     public UnityEvent whenInteracted;
     public GameObject player;
+    public DialogueManager manager;
+
+    private void Start()
+    {
+        manager = FindObjectOfType<DialogueManager>();
+    }
     void Update()
     {
-        if (inRange)
+       if(inRange)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (manager.IsDone)
             {
-                whenInteracted.Invoke();
-                player.GetComponent<PlayerController>().enabled = false;
+                if (Input.GetKeyDown(KeyCode.X))
+                    whenInteracted.Invoke();
             }
         }
-
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            inRange = true;
+            inRange = true;    
         }
     }
     void OnTriggerExit2D(Collider2D collision)
