@@ -8,7 +8,6 @@ public class RoomATrigger : MonoBehaviour
     public Dialogue yesKey;
     public PlayerController player;
     public GameObject door;
-
     public void TriggerDialogue()
     {
         switch (player.SunKey)

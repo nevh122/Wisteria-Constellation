@@ -22,9 +22,9 @@ public class DialogueManager : MonoBehaviour
         icons = new Queue<Sprite>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             DisplayNextDialogue();
         }
@@ -51,7 +51,6 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-        DisplayNextDialogue();
     }
     public void DisplayNextDialogue()
     {
@@ -63,19 +62,9 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         string name = names.Dequeue();
         Sprite icon = icons.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        dialogueText.text = sentence;
         nameText.text = name;
         NPCIco.sprite = icon;
-    }
-    IEnumerator TypeSentence (string sentence)
-    {
-        dialogueText.text = "";
-        foreach (char letter in sentence.ToCharArray())
-        {
-            dialogueText.text += letter;
-            yield return null;
-        }
     }
     public void EndDialogue()
     {

@@ -5,10 +5,12 @@ using UnityEngine.Events;
 
 public class NPCInteract : MonoBehaviour
 {
-    bool inRange;
+    public bool inRange;
     public UnityEvent whenInteracted;
     public GameObject player;
     public DialogueManager manager;
+    bool hasInteracted;
+    public GameObject exclamationPoint;
 
     private void Start()
     {
@@ -16,20 +18,25 @@ public class NPCInteract : MonoBehaviour
     }
     void Update()
     {
-       if(inRange)
+        if (inRange && hasInteracted == false)
         {
-            if (manager.IsDone)
+            if (manager.IsDone == true)
             {
                 if (Input.GetKeyDown(KeyCode.X))
+                {
+                    hasInteracted = true;
                     whenInteracted.Invoke();
+                }
             }
         }
+
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            inRange = true;    
+            inRange = true;
+            exclamationPoint.SetActive(true);
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -37,6 +44,8 @@ public class NPCInteract : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = false;
+            hasInteracted = false;
+            exclamationPoint.SetActive(false);
         }
     }
 }
