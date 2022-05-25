@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText, dialogueText;
+    public TextMeshProUGUI nameText, dialogueText;
     public Image NPCIco;
     private Queue<string> sentences, names;
     private Queue<Sprite> icons;
 
     public Animator DiagBox;
+    public bool isDone;
     void Start()
     {
         sentences = new Queue<string>();
@@ -20,13 +22,14 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             DisplayNextDialogue();
         }
     }
     public void StartDialogue(DialogueBoxElements dialogue)
     {
+        isDone = false;
         sentences.Clear();
         names.Clear();
         icons.Clear();
@@ -49,6 +52,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
+            isDone = true;
             EndDialogue();
             return;
         }
