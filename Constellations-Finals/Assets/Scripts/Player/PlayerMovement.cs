@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Handles player movement and possibly animation in the future
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;

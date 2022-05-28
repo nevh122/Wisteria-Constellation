@@ -9,11 +9,14 @@ public class CameraFollow : MonoBehaviour
 
     Vector3 offset;
     Vector3 playerPos;
+
+    //Places camera away from player
     void Start()
     {
         offset = transform.position - player.position;
     }
 
+    //Adds offset and applies a following motion to the player
     void Update()
     {
         playerPos = player.position + offset;

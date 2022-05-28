@@ -12,20 +12,14 @@ public class DialogueManager : MonoBehaviour
     private Queue<Sprite> icons;
 
     public Animator DiagBox;
-    public bool isDone;
+    public bool isDone = true;
+
+    //Clears Queue when starting
     void Start()
     {
         sentences = new Queue<string>();
         names = new Queue<string>();
         icons = new Queue<Sprite>();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            DisplayNextDialogue();
-        }
     }
     public void StartDialogue(DialogueBoxElements dialogue)
     {
@@ -34,6 +28,7 @@ public class DialogueManager : MonoBehaviour
         names.Clear();
         icons.Clear();
 
+        //Clears Queue when there is a new dialogue set
         DiagBox.SetBool("IsOpen", true);
         foreach (string name in dialogue.NPCName)
         {
@@ -47,12 +42,13 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
+        DisplayNextDialogue();
     }
     public void DisplayNextDialogue()
     {
+        //Dequeue the dilogue in order of the array
         if (sentences.Count == 0)
         {
-            isDone = true;
             EndDialogue();
             return;
         }
@@ -65,6 +61,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void EndDialogue()
     {
+        isDone = true;
         DiagBox.SetBool("IsOpen", false);
     }
 }
