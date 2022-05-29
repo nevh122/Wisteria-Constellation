@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<Sprite> icons;
 
     public Animator DiagBox;
-    public bool isDone = true;
+    public bool isDone;
 
     //Clears Queue when starting
     void Start()
@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
         //Dequeue the dilogue in order of the array
         if (sentences.Count == 0)
         {
+            isDone = true;
             EndDialogue();
             return;
         }
