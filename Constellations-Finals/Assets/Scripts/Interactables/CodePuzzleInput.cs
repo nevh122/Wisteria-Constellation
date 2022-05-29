@@ -16,6 +16,7 @@ public class CodePuzzleInput : MonoBehaviour
     public bool CodeIsCorrect;
     public string CorrectCode;
 
+    public DialogueBoxElements CodeFinishedDialogue;
     void Start()
     {
         diagManager = FindObjectOfType<DialogueManager>();
@@ -24,6 +25,12 @@ public class CodePuzzleInput : MonoBehaviour
     private void Update()
     {
         StartCodeInput();
+        CheckCode();
+        if (CodeIsCorrect)
+        {
+            CodeInputComplete();
+        }
+        else return;
     }
 
     //Checks when to open and close keypad code input
@@ -42,9 +49,18 @@ public class CodePuzzleInput : MonoBehaviour
     //Checks if code input is correct
     public void CheckCode()
     {
-        if(PlayerInput.text == CorrectCode)
+        if(PlayerInput.text.ToString() == CorrectCode)
         {
             CodeIsCorrect = true;
         }
+    }
+
+    //if the input puzzle is complete
+    public void CodeInputComplete()
+    {
+        CodeInputUI.SetActive(false);
+        InteractionRange.SetActive(false);
+        //Triggers a dialogue when code input is correct
+        FindObjectOfType<DialogueManager>().StartDialogue(CodeFinishedDialogue);
     }
 }
