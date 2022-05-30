@@ -44,6 +44,7 @@ public class NPCInteractEvent : MonoBehaviour
         {
             isInside = false;
             manager.EndDialogue();
+            manager.hasInteracted = false;
         }
     }
 }

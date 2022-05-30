@@ -9,18 +9,22 @@ public class CodePuzzleInput : MonoBehaviour
     DialogueManager diagManager;
     public GameObject CodeInputUI;
     NPCInteractEvent ObjectDialogue;
+    NPCDialogue DefaultDialogue;
     public GameObject InteractionRange;
 
-
-    public TextMeshProUGUI PlayerInput;
+    public TMP_InputField PlayerInput;
     public bool CodeIsCorrect;
-    public string CorrectCode;
+    public string CorrectCode = "";
+    bool CodeInputDone = true;
+    bool ChangeDialogue;
 
     public DialogueBoxElements CodeFinishedDialogue;
+    public DialogueBoxElements InteractAgainWhileFinished;
     void Start()
     {
         diagManager = FindObjectOfType<DialogueManager>();
         ObjectDialogue = InteractionRange.GetComponent<NPCInteractEvent>();
+        DefaultDialogue = gameObject.GetComponent<NPCDialogue>();
     }
     private void Update()
     {
@@ -30,13 +34,16 @@ public class CodePuzzleInput : MonoBehaviour
         {
             CodeInputComplete();
         }
-        else return;
+        if(CodeInputDone == false)
+        {
+            NewDialogueAfterCompletion();
+        }
     }
 
     //Checks when to open and close keypad code input
     void StartCodeInput()
     {
-        if(diagManager.isDone && ObjectDialogue.isInside && CodeIsCorrect == false)
+        if (diagManager.isDone && ObjectDialogue.isInside && CodeIsCorrect == false && diagManager.hasInteracted)
         {
             CodeInputUI.SetActive(true);
         }
@@ -49,7 +56,7 @@ public class CodePuzzleInput : MonoBehaviour
     //Checks if code input is correct
     public void CheckCode()
     {
-        if(PlayerInput.text.ToString() == CorrectCode)
+        if(PlayerInput.text == CorrectCode)
         {
             CodeIsCorrect = true;
         }
@@ -58,9 +65,22 @@ public class CodePuzzleInput : MonoBehaviour
     //if the input puzzle is complete
     public void CodeInputComplete()
     {
-        CodeInputUI.SetActive(false);
-        InteractionRange.SetActive(false);
-        //Triggers a dialogue when code input is correct
-        FindObjectOfType<DialogueManager>().StartDialogue(CodeFinishedDialogue);
+        if (CodeInputDone)
+        {
+            CodeInputUI.SetActive(false);
+            //Triggers a dialogue when code input is correct
+            FindObjectOfType<DialogueManager>().StartDialogue(CodeFinishedDialogue);
+            CodeInputDone = false;
+            ChangeDialogue = true;
+        }
+    }
+
+    //Dialogue after completing the code puzzle
+    public void NewDialogueAfterCompletion()
+    {
+        if (ChangeDialogue)
+        {
+            DefaultDialogue.dialogue = InteractAgainWhileFinished;
+        }
     }
 }

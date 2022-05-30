@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     public Animator DiagBox;
     public bool isDone;
+    public bool hasInteracted;
 
     //Clears Queue when starting
     void Start()
@@ -23,13 +24,14 @@ public class DialogueManager : MonoBehaviour
     }
     public void StartDialogue(DialogueBoxElements dialogue)
     {
+        //Clears Queue when there is a new dialogue set
         isDone = false;
         sentences.Clear();
         names.Clear();
         icons.Clear();
 
-        //Clears Queue when there is a new dialogue set
         DiagBox.SetBool("IsOpen", true);
+        //Enqueues new dialogue
         foreach (string name in dialogue.NPCName)
         {
             names.Enqueue(name);
@@ -49,6 +51,9 @@ public class DialogueManager : MonoBehaviour
         //Dequeue the dilogue in order of the array
         if (sentences.Count == 0)
         {
+            //to use by other scripts if the dialogue is done
+            hasInteracted = true;
+
             isDone = true;
             EndDialogue();
             return;
@@ -63,6 +68,6 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isDone = true;
-        DiagBox.SetBool("IsOpen", false);
+        DiagBox.SetBool("IsOpen", false);   
     }
 }
