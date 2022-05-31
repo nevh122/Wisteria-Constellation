@@ -12,6 +12,7 @@ public class ChoicesDialogue : MonoBehaviour
     public GameObject ChoicesUI;
     public GameObject InteractionRange;
     NPCDialogue DefaultDialogue;
+    Animator DialogueAnimator;
 
     public TMP_Text button1, button2, ChoicesQuestion;
     [SerializeField] string button1Text, button2Text, ChoicesQuestionText;
@@ -27,6 +28,7 @@ public class ChoicesDialogue : MonoBehaviour
         diagManager = FindObjectOfType<DialogueManager>();
         ObjectDialogue = InteractionRange.GetComponent<NPCInteractEvent>();
         DefaultDialogue = gameObject.GetComponent<NPCDialogue>();
+        DialogueAnimator = ChoicesUI.GetComponent<Animator>();
     }
     private void Update()
     {
@@ -40,25 +42,25 @@ public class ChoicesDialogue : MonoBehaviour
     {
         if (diagManager.isDone && ObjectDialogue.isInside && diagManager.hasInteracted && hasPicked == false)
         {
-            ChoicesUI.GetComponent<Animator>().SetBool("IsOpen",true);
+            DialogueAnimator.SetBool("IsOpen",true);
         }
         else
         {
-            ChoicesUI.GetComponent<Animator>().SetBool("IsOpen",false);
+            DialogueAnimator.GetComponent<Animator>().SetBool("IsOpen",false);
         }
     }
 
     //What buttons does when interacted
     public void Choice1Button()
     {
-        ChoicesUI.GetComponent<Animator>().SetBool("IsOpen", false);
+        DialogueAnimator.SetBool("IsOpen", false);
         FindObjectOfType<DialogueManager>().StartDialogue(button1Picked);
         hasPicked = true;
         buttonPicked = 1;
     }
     public void Choice2Button()
     {
-        ChoicesUI.GetComponent<Animator>().SetBool("IsOpen", false);
+        DialogueAnimator.SetBool("IsOpen", false);
         FindObjectOfType<DialogueManager>().StartDialogue(button2Picked);
         hasPicked = true;
         buttonPicked = 2;
