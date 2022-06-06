@@ -7,11 +7,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
+    //public 
 
     public void Move()
     {
         Vector2 direction = Vector2.zero;
-
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             direction.x = -1;
