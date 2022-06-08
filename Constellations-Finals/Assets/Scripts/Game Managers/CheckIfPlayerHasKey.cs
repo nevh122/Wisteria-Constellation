@@ -70,4 +70,15 @@ public class CheckIfPlayerHasKey : MonoBehaviour
             FindObjectOfType<DialogueManager>().StartDialogue(dialogueIfLocked);
         }
     }
+    public void MoonKey()
+    {
+        if (playerController.MoonKey== true)
+        {
+            GetComponent<BoxCollider2D>().isTrigger = true;
+        }
+        else if (playerController.MoonKey == false)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogueIfLocked);
+        }
+    }
 }

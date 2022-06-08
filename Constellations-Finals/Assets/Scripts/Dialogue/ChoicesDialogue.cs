@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class ChoicesDialogue : MonoBehaviour
 {
@@ -16,9 +17,9 @@ public class ChoicesDialogue : MonoBehaviour
 
     public TMP_Text button1, button2, ChoicesQuestion;
     [SerializeField] string button1Text, button2Text, ChoicesQuestionText;
-    public DialogueBoxElements button1Picked, button2Picked;
-    bool hasPicked = false;
-    int buttonPicked = 0;
+    public bool hasPicked = false;
+
+    public UnityEvent WhenButton1Pressed, WhenButton2Pressed;
     private void Start()
     {
         button1.text = button1Text;
@@ -32,9 +33,7 @@ public class ChoicesDialogue : MonoBehaviour
     }
     private void Update()
     {
-        if (hasPicked) PlayerHasPickedDialogue();
-        else StartChoicesPicker();
-            
+        if (hasPicked == false) StartChoicesPicker();
     }
 
     //initiates Choices UI;
@@ -46,7 +45,7 @@ public class ChoicesDialogue : MonoBehaviour
         }
         else
         {
-            DialogueAnimator.GetComponent<Animator>().SetBool("IsOpen",false);
+            DialogueAnimator.SetBool("IsOpen",false);
         }
     }
 
@@ -54,30 +53,11 @@ public class ChoicesDialogue : MonoBehaviour
     public void Choice1Button()
     {
         DialogueAnimator.SetBool("IsOpen", false);
-        FindObjectOfType<DialogueManager>().StartDialogue(button1Picked);
-        hasPicked = true;
-        buttonPicked = 1;
+        WhenButton1Pressed.Invoke();
     }
     public void Choice2Button()
     {
         DialogueAnimator.SetBool("IsOpen", false);
-        FindObjectOfType<DialogueManager>().StartDialogue(button2Picked);
-        hasPicked = true;
-        buttonPicked = 2;
-    }
-
-    //When player intearcts with NPC again will change base on what the player has chosen
-    public void PlayerHasPickedDialogue()
-    {
-        switch (buttonPicked)
-        {
-            case 1:
-                DefaultDialogue.dialogue = button1Picked;
-                break;
-            case 2:
-                DefaultDialogue.dialogue = button2Picked;
-                break;
-            default: break;
-        }
+        WhenButton2Pressed.Invoke();
     }
 }

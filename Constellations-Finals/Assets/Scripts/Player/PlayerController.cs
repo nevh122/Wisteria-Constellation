@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public bool Sunkey;
     public bool StarKey;
     public bool WithJanus;
+    public bool MoonKey;
+    public bool CloverLeaf;
 
     private void Start()
     {
@@ -18,5 +20,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         playerMovement.Move();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }

@@ -8,6 +8,7 @@ public class CheckPlanetPositions : MonoBehaviour
     public DialogueBoxElements whenPuzzleisFinished;
     bool PuzzleEnd = false;
     [SerializeField] GameObject ResetButton;
+    [SerializeField] GameObject Moonkey;
 
     private void Update()
     {
@@ -35,6 +36,7 @@ public class CheckPlanetPositions : MonoBehaviour
     {
         PuzzleEnd = true;
         FindObjectOfType<DialogueManager>().StartDialogue(whenPuzzleisFinished);
+        Moonkey.SetActive(true);
         ResetButton.SetActive(false);
         Invoke("CloseDialogue", 2);
     }
