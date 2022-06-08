@@ -7,6 +7,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     PlayerMovement playerMovement;
+    public bool Sunkey;
+    public bool StarKey;
+    public bool WithJanus;
+
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();

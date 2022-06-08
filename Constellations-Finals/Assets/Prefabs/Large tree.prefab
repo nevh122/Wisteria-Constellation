@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransparentObject: {fileID: 1631352834540321005}
+  transparency: 0.5
 --- !u!1 &1631352834540321005
 GameObject:
   m_ObjectHideFlags: 0

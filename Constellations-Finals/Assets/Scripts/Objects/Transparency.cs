@@ -6,6 +6,7 @@ public class Transparency : MonoBehaviour
 {
     [SerializeField]GameObject TransparentObject;
     SpriteRenderer ObjectRenderer;
+    [SerializeField] float transparency;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class Transparency : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            ObjectRenderer.color = new Color (1,1,1,0.6f);
+            ObjectRenderer.color = new Color (1,1,1,transparency);
         }
     }
 

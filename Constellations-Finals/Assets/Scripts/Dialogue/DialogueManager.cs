@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     {
         //Clears Queue when there is a new dialogue set
         isDone = false;
+        hasInteracted = false;
         sentences.Clear();
         names.Clear();
         icons.Clear();

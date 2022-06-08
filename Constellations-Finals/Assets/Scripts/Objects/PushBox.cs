@@ -5,6 +5,7 @@ using UnityEngine;
 public class PushBox : MonoBehaviour
 {
     Rigidbody2D boxBody;
+    public Vector3 originalPos;
 
     private void Start()
     {
@@ -28,5 +29,11 @@ public class PushBox : MonoBehaviour
             boxBody.constraints = RigidbodyConstraints2D.FreezeAll;
             boxBody.velocity = Vector3.zero;
         }
+    }
+
+    //to be called, resets the position of the objects
+    public void ReturntoOriginalPosition()
+    {
+        transform.position = originalPos;
     }
 }
