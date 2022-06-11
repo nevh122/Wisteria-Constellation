@@ -20,10 +20,5 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         playerMovement.Move();
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
     }
 }
