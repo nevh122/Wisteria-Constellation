@@ -29,5 +29,6 @@ public class GetMoonKey : MonoBehaviour
     {
         dialogueManager.StartDialogue(MoonKeyDialogue);
         playerController.MoonKey = true;
+        playerController.inventoryText.text += "\n - Moon Key";
     }
 }

@@ -8,7 +8,7 @@ public class OpeningScneTransition : MonoBehaviour
 {
     public Animator TransitionEffect;
     public VideoPlayer Cutscene;
-    public string NextSceneName;
+    public int buildIndex;
 
     private void Update()
     {
@@ -21,6 +21,6 @@ public class OpeningScneTransition : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(sceneName: NextSceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + buildIndex);
     }
 }

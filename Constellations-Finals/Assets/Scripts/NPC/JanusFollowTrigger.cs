@@ -26,6 +26,7 @@ public class JanusFollowTrigger : MonoBehaviour
             GetComponent<FollowPlayer>().enabled = true;
             GetComponent<CircleCollider2D>().enabled = false;
             JanusInteractionRange.SetActive(false);
+            playerController.inventoryText.text += "\n - Janus";
             playerController.WithJanus = true;
             isFollowing = true;
         }

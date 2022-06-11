@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: Cutscene
       value: 
       objectReference: {fileID: 1861603110}
+    - target: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
+      propertyPath: buildIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5517345598228156445, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
       propertyPath: m_Name
       value: LevelTransitionEffect

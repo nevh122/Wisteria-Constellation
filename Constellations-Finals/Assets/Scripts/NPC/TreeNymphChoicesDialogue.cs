@@ -37,6 +37,7 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
             FindObjectOfType<DialogueManager>().StartDialogue(YesCloverLeaf);
             TreeNymphChoicesDialogueScript.hasPicked = true;
             DefaultDialogue.dialogue = YesDialogueChange;
+            playerController.inventoryText.text += "\n - Star Key";
             playerController.StarKey = true;
         }
         else

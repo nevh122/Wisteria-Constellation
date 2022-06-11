@@ -558,7 +558,7 @@ Animator:
   m_GameObject: {fileID: 856519538}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3646377313fb0894da0bcede79d65f23, type: 2}
+  m_Controller: {fileID: 9100000, guid: c57c9d2d6ccdab243804dbaa4e624b07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -999,6 +999,10 @@ PrefabInstance:
       value: -2102166405
       objectReference: {fileID: 0}
     - target: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
+      propertyPath: buildIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
       propertyPath: NextSceneName
       value: Opening Scene
       objectReference: {fileID: 0}
@@ -1050,6 +1054,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5517345598228156447, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a09c5df8ec059c944a1cd550422f8b94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
 --- !u!1 &1493781119

@@ -27,6 +27,7 @@ public class GetSunKey : MonoBehaviour
     {
         if(MazeChest.CodeIsCorrect == true)
         {
+            playerController.inventoryText.text += "\n - Sun Key";
             playerController.Sunkey = true;
         }
     }
