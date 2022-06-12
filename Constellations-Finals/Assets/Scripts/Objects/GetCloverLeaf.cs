@@ -10,6 +10,7 @@ public class GetCloverLeaf : MonoBehaviour
     DialogueManager dialogueManager;
     [SerializeField] NPCInteractEvent CloverLeafInteractRange;
 
+    //When player interacts with clover leaf
     private void Start()
     {
         playerController = FindObjectOfType<PlayerController>();

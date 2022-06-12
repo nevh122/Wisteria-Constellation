@@ -8,12 +8,15 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
     public DialogueBoxElements YesCloverLeaf, YesPendant, NoDialogue, NoDialogueChange, YesDialogueChange;
     NPCDialogue DefaultDialogue;
     ChoicesDialogue TreeNymphChoicesDialogueScript;
+    DialogueManager dialogueManager;
+    bool KillPlayer = false;
 
     private void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
         DefaultDialogue = GetComponent<NPCDialogue>();
         TreeNymphChoicesDialogueScript = GetComponent<ChoicesDialogue>();
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     //Questions for picking during tree nymph dialogue
@@ -21,11 +24,18 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
     {
         if(playerController.CloverLeaf == true)
         {
-            TreeNymphChoicesDialogueScript.ChoicesQuestion.text = "Give Tree Nyph the Clover Leaf?";
+            TreeNymphChoicesDialogueScript.ChoicesQuestion.text = "Give Tree Nymph the Clover Leaf?";
         }
         else
         {
-            TreeNymphChoicesDialogueScript.ChoicesQuestion.text = "Give Tree Nyph the Pendant?";
+            TreeNymphChoicesDialogueScript.ChoicesQuestion.text = "Give Tree Nymph the Pendant?";
+        }
+        //kills player if using pendant
+        if(KillPlayer && dialogueManager.hasInteracted && dialogueManager.isDone)
+        {
+            playerController.enabled = false;
+            playerController.CheckPlayerDead();
+            dialogueManager.hasInteracted = false;
         }
     }
 
@@ -34,7 +44,7 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
     {
         if(playerController.CloverLeaf == true)
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(YesCloverLeaf);
+            dialogueManager.StartDialogue(YesCloverLeaf);
             TreeNymphChoicesDialogueScript.hasPicked = true;
             DefaultDialogue.dialogue = YesDialogueChange;
             playerController.inventoryText.text += "\n - Star Key";
@@ -42,8 +52,9 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(YesPendant);
+            dialogueManager.StartDialogue(YesPendant);
             TreeNymphChoicesDialogueScript.hasPicked = true;
+            KillPlayer = true;
         }
     }
 
@@ -52,15 +63,22 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
     {
         if (playerController.CloverLeaf == true)
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(NoDialogue);
+            dialogueManager.StartDialogue(NoDialogue);
             TreeNymphChoicesDialogueScript.hasPicked = false;
             DefaultDialogue.dialogue = NoDialogueChange;
+            TreeNymphChoicesDialogueScript.reset = true;
         }
         else
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(NoDialogue);
+            dialogueManager.StartDialogue(NoDialogue);
             TreeNymphChoicesDialogueScript.hasPicked = false;
             DefaultDialogue.dialogue = NoDialogueChange;
+            TreeNymphChoicesDialogueScript.reset = true;
         }
+    }
+    //to reset choices picker after choosing no
+    public void ResetChoices()
+    {
+        TreeNymphChoicesDialogueScript.reset = false;
     }
 }

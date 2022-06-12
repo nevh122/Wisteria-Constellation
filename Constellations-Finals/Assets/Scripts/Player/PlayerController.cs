@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public bool MoonKey;
     public bool CloverLeaf;
     public TextMeshProUGUI inventoryText;
+    public Animator DeathTransition;
+    TreeNymphChoicesDialogue treeNymph;
 
     private void Start()
     {
@@ -22,5 +24,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         playerMovement.Move();
+    }
+    //called by other scripts when player has died
+    public void CheckPlayerDead()
+    {
+        DeathTransition.SetTrigger("Transition");
     }
 }

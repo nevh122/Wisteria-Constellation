@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public Animator MenuButtons;
     public Animator HowToPlay;
 
+    //to be called by buttons in main menu screen
     private void Start()
     {
         MenuButtons.SetBool("IsOpen", true);

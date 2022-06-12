@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     bool isOpen = false;
     public int buildIndex;
 
+    //if player press main menu button
     private void Update()
     {
         if(isOpen == false)
@@ -27,6 +28,8 @@ public class PauseMenu : MonoBehaviour
             }
         }        
     }
+
+    //to be called by pause menu buttons
     public void OpenPauseMenu()
     {
         isOpen = true;

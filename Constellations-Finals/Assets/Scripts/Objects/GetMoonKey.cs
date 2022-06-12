@@ -17,6 +17,7 @@ public class GetMoonKey : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
+    //when player interacts with moon key
     private void Update()
     {
         if(dialogueManager.hasInteracted == true && MoonKeyInteractRange.isInside == true)

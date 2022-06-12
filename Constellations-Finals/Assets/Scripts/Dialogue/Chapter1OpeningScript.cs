@@ -10,6 +10,7 @@ public class Chapter1OpeningScript : MonoBehaviour
     public GameObject player;
     public GameObject self;
 
+    //Starts opening dialogue once the game has started
     public void Start()
     {
         Invoke("StartOpeningDialogue", 0);

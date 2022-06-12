@@ -9,6 +9,7 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField] Transform Player;
     Vector3 JanusPos;
 
+    // object follows player with fixed offset
     void Update()
     {
         JanusPos = Player.position + offset;

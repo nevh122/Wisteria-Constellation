@@ -18,6 +18,7 @@ public class ChoicesDialogue : MonoBehaviour
     public TMP_Text button1, button2, ChoicesQuestion;
     [SerializeField] string button1Text, button2Text, ChoicesQuestionText;
     public bool hasPicked = false;
+    public bool reset = false;
 
     public UnityEvent WhenButton1Pressed, WhenButton2Pressed;
     private void Start()
@@ -39,7 +40,7 @@ public class ChoicesDialogue : MonoBehaviour
     //initiates Choices UI;
     void StartChoicesPicker()
     {
-        if (diagManager.isDone && ObjectDialogue.isInside && diagManager.hasInteracted && hasPicked == false)
+        if (diagManager.isDone && ObjectDialogue.isInside && diagManager.hasInteracted && hasPicked == false && reset == false)
         {
             DialogueAnimator.SetBool("IsOpen",true);
         }
