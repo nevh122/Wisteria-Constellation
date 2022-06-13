@@ -16,14 +16,26 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI inventoryText;
     public Animator DeathTransition;
     TreeNymphChoicesDialogue treeNymph;
+    ChoicesDialogue choicesDialogue;
+    DialogueManager dialogueManager;
 
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        choicesDialogue = FindObjectOfType<ChoicesDialogue>();
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
     void Update()
     {
-        playerMovement.Move();
+        if (choicesDialogue.isActive || dialogueManager.isActive)
+        {
+            playerMovement.playerAnim.SetBool("IsMoving", false);
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+        else if(choicesDialogue.isActive == false || dialogueManager.isActive == false)
+        {
+            playerMovement.Move();
+        }
     }
     //called by other scripts when player has died
     public void CheckPlayerDead()

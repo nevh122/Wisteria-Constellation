@@ -19,6 +19,7 @@ public class ChoicesDialogue : MonoBehaviour
     [SerializeField] string button1Text, button2Text, ChoicesQuestionText;
     public bool hasPicked = false;
     public bool reset = false;
+    public bool isActive = false;
 
     public UnityEvent WhenButton1Pressed, WhenButton2Pressed;
     private void Start()
@@ -42,6 +43,7 @@ public class ChoicesDialogue : MonoBehaviour
     {
         if (diagManager.isDone && ObjectDialogue.isInside && diagManager.hasInteracted && hasPicked == false && reset == false)
         {
+            isActive = true;
             DialogueAnimator.SetBool("IsOpen",true);
         }
         else
@@ -53,11 +55,13 @@ public class ChoicesDialogue : MonoBehaviour
     //What buttons does when interacted
     public void Choice1Button()
     {
+        isActive = false;
         DialogueAnimator.SetBool("IsOpen", false);
         WhenButton1Pressed.Invoke();
     }
     public void Choice2Button()
     {
+        isActive = false;
         DialogueAnimator.SetBool("IsOpen", false);
         WhenButton2Pressed.Invoke();
     }

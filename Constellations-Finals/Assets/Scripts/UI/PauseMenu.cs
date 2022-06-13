@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuUI;
     public GameObject player;
-    bool isOpen = false;
+    public bool isOpen = false;
     public int buildIndex;
 
     //if player press main menu button

@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     public Animator DiagBox;
     public bool isDone;
     public bool hasInteracted;
+    public bool isActive = false;
 
     //Clears Queue when starting
     void Start()
@@ -27,6 +28,7 @@ public class DialogueManager : MonoBehaviour
         //Clears Queue when there is a new dialogue set
         isDone = false;
         hasInteracted = false;
+        isActive = true;
         sentences.Clear();
         names.Clear();
         icons.Clear();
@@ -54,7 +56,7 @@ public class DialogueManager : MonoBehaviour
         {
             //to use by other scripts if the dialogue is done
             hasInteracted = true;
-
+            isActive = false;
             isDone = true;
             EndDialogue();
             return;
@@ -68,6 +70,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void EndDialogue()
     {
+        isActive = false;
         isDone = true;
         DiagBox.SetBool("IsOpen", false);   
     }

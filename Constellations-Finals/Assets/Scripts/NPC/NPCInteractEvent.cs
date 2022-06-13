@@ -8,18 +8,22 @@ public class NPCInteractEvent : MonoBehaviour
     public UnityEvent whenInteracted;
     DialogueManager manager;
     public bool isInside = false;
+    PauseMenu pauseMenu;
+    ChoicesDialogue choicesDialogue;
 
     void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
+        pauseMenu = FindObjectOfType<PauseMenu>();
+        choicesDialogue = FindObjectOfType<ChoicesDialogue>();
     }
 
     //if the player press interact button and in range does the following
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isInside)
+        if (Input.GetKeyDown(KeyCode.E) && isInside && pauseMenu.isOpen == false)
         {
-            if (manager.isDone)
+            if (manager.isDone && choicesDialogue.isActive == false)
             {
                 whenInteracted.Invoke();
             }

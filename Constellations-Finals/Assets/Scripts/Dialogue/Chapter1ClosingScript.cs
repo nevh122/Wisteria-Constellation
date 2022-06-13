@@ -6,7 +6,6 @@ using UnityEngine;
 public class Chapter1ClosingScript : MonoBehaviour
 {
     DialogueManager manager;
-    PlayerController controller;
     public DialogueBoxElements EndDialogue;
     bool thisScript = false;
     public Animator Transition;
@@ -14,13 +13,11 @@ public class Chapter1ClosingScript : MonoBehaviour
     private void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
-        controller = FindObjectOfType<PlayerController>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            controller.enabled = false;
             manager.StartDialogue(EndDialogue);
             thisScript = true;
         }

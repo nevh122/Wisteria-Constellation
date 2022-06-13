@@ -20,16 +20,8 @@ public class CheckIfPlayerHasKey : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             IfPlayerHasAMissingItem.Invoke();
+            Invoke("CloseDialogue", 2);
         }
-        else return;
-    }
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            Invoke("CloseDialogue", 1);
-        }
-        else return;
     }
     public void CloseDialogue()
     {

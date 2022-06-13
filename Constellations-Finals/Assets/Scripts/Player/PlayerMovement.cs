@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
-    Animator playerAnim;
+    public Animator playerAnim;
     private void Start()
     {
         playerAnim = GetComponent<Animator>();
