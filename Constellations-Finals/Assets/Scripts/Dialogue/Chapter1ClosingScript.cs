@@ -10,9 +10,11 @@ public class Chapter1ClosingScript : MonoBehaviour
     bool thisScript = false;
     public Animator Transition;
     bool isInside = false;
+    PauseMenu pauseMenu;
     private void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
+        pauseMenu = FindObjectOfType<PauseMenu>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,7 +32,7 @@ public class Chapter1ClosingScript : MonoBehaviour
     {
         if (isInside)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && pauseMenu == false)
             {
                 manager.DisplayNextDialogue();
             }

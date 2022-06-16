@@ -29,5 +29,6 @@ public class GetCloverLeaf : MonoBehaviour
     {
         dialogueManager.StartDialogue(CloverLeafDialogue);
         playerController.CloverLeaf = true;
+        playerController.inventoryText.text += "\n - Clover Leaf";
     }
 }

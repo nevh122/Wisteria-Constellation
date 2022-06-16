@@ -10,6 +10,7 @@ public class NPCInteractEvent : MonoBehaviour
     public bool isInside = false;
     PauseMenu pauseMenu;
     ChoicesDialogue choicesDialogue;
+    public GameObject indicator;
 
     void Start()
     {
@@ -39,6 +40,7 @@ public class NPCInteractEvent : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            indicator.SetActive(true);
             isInside = true;
         }
     }
@@ -46,6 +48,7 @@ public class NPCInteractEvent : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            indicator.SetActive(false);
             isInside = false;
             manager.EndDialogue();
             manager.hasInteracted = false;
