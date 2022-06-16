@@ -9,37 +9,28 @@ public class Chapter1ClosingScript : MonoBehaviour
     public DialogueBoxElements EndDialogue;
     bool thisScript = false;
     public Animator Transition;
-    bool isInside = false;
-    PauseMenu pauseMenu;
+    public bool isInside = false;
+    PlayerMovement playerMovement;
+    public GameObject player;
     private void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
-        pauseMenu = FindObjectOfType<PauseMenu>();
+        playerMovement = FindObjectOfType<PlayerMovement>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void TriggerEndDialogue()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            manager.StartDialogue(EndDialogue);
-            thisScript = true;
-        }
+        manager.StartDialogue(EndDialogue);
+        thisScript = true;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    public void Update()
     {
-        isInside = true;
-    }
-    private void Update()
-    {
-        if (isInside)
-        {
-            if (Input.GetKeyDown(KeyCode.E) && pauseMenu == false)
-            {
-                manager.DisplayNextDialogue();
-            }
-        }
-        
         if (thisScript && manager.isDone && manager.hasInteracted)
         {
+            GetComponent<NPCInteractEvent>().enabled = false;
+            playerMovement.playerAnim.SetBool("IsMoving", false);
+            player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            player.GetComponent<PlayerController>().enabled = false;
             Transition.SetTrigger("Transition");
             manager.hasInteracted = false;
         }

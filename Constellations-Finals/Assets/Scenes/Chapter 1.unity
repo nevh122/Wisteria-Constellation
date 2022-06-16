@@ -1869,7 +1869,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCDialogue.Array.data[0]
-      value: 5 = b
+      value: 5 = 1
       objectReference: {fileID: 0}
     - target: {fileID: 9124112045152409225, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: m_Name
@@ -2854,7 +2854,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.28235295}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3135,7 +3135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f877a8bae5e37974cbf9d24b59e58403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 6
   playerAnim: {fileID: 0}
 --- !u!114 &323079780
 MonoBehaviour:
@@ -3215,7 +3215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323079778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.03, y: -3.62, z: 0}
+  m_LocalPosition: {x: 27.149996, y: -3.050002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 337291085}
@@ -3540,7 +3540,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2102166405
   m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 44c93b57810bd704983975ab481c2f0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8156863}
   m_FlipX: 0
@@ -5942,7 +5942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.030003, y: -3.5599985, z: -10}
+  m_LocalPosition: {x: 27.15, y: -2.99, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6100,7 +6100,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCDialogue.Array.data[0]
-      value: 2 = E
+      value: 2 = 7
       objectReference: {fileID: 0}
     - target: {fileID: 9124112045152409225, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: m_Name
@@ -8477,7 +8477,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCDialogue.Array.data[0]
-      value: 1 = I
+      value: 1 = 9
       objectReference: {fileID: 0}
     - target: {fileID: 9124112045152409225, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: m_Name
@@ -15687,15 +15687,15 @@ MonoBehaviour:
     - Rigel
     - System
     NPCSprite:
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     NPCDialogue:
     - You know a lot about planets.
     - Y-Yeah! T-They're interesting and looking up at them is so pretty!
@@ -16151,7 +16151,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.28235295}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16204,7 +16204,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCDialogue.Array.data[0]
-      value: 4 = t
+      value: 4 = 3
       objectReference: {fileID: 0}
     - target: {fileID: 9124112045152409225, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: m_Name
@@ -32884,7 +32884,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.28235295}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -33873,25 +33873,25 @@ MonoBehaviour:
     - Tree Nymph
     - Tree Nymph
     NPCSprite:
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
     NPCDialogue:
     - A visitor? I haven't had any visitors for a long time!
     - H-Hello...
@@ -34042,11 +34042,11 @@ MonoBehaviour:
     NPCSprite:
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
     - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
     - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
     NPCDialogue:
     - Y-Yes... H-Here.
@@ -34071,9 +34071,9 @@ MonoBehaviour:
     NPCSprite:
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
     NPCDialogue:
@@ -34090,7 +34090,7 @@ MonoBehaviour:
     - Tree Nymph
     NPCSprite:
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
     NPCDialogue:
     - I-I can't, I'm sorry...
     - Such a shame... Then I shall keep this key.
@@ -34098,14 +34098,14 @@ MonoBehaviour:
     NPCName:
     - Tree Nymph
     NPCSprite:
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
     NPCDialogue:
     - Ah, have you changed your mind?
   YesDialogueChange:
     NPCName:
     - Tree Nymph
     NPCSprite:
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 99dd7276e25037c4ea7c0dd8116ca4e9, type: 3}
     NPCDialogue:
     - "I wish I could get more of that color\u2026"
 --- !u!1001 &1042547740
@@ -34413,7 +34413,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.28235295}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -35521,7 +35521,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCDialogue.Array.data[0]
-      value: 3 = S
+      value: 3 = 5
       objectReference: {fileID: 0}
     - target: {fileID: 9124112045152409225, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: m_Name
@@ -36264,14 +36264,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -40349,7 +40349,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.28235295}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -44523,6 +44523,7 @@ GameObject:
   - component: {fileID: 1905924008}
   - component: {fileID: 1905924007}
   - component: {fileID: 1905924009}
+  - component: {fileID: 1905924010}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -44647,15 +44648,15 @@ MonoBehaviour:
     - Janus
     NPCSprite:
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     NPCDialogue:
     - "U-Um\u2026 Mister Janus\u2026?"
     - What?
@@ -44670,6 +44671,37 @@ MonoBehaviour:
     - "Now come on, the sooner you get out of here \nthe sooner you can be out of
       my hair."
   Transition: {fileID: 1905759498}
+  isInside: 0
+  player: {fileID: 323079778}
+--- !u!114 &1905924010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905924005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91838b2ddf99598428ebd1a71effb559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whenInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1905924009}
+        m_TargetAssemblyTypeName: Chapter1ClosingScript, Assembly-CSharp
+        m_MethodName: TriggerEndDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isInside: 0
+  indicator: {fileID: 337291084}
 --- !u!1 &1923207393
 GameObject:
   m_ObjectHideFlags: 0
@@ -47089,33 +47121,33 @@ MonoBehaviour:
     - System
     NPCSprite:
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
-    - {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+    - {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     NPCDialogue:
     - An item...?
     - What the hell do you mean 'an item'?!
@@ -48136,15 +48168,15 @@ PrefabInstance:
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCSprite.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: df78d5fd41f8e944cb306742baf6940f, type: 3}
+      objectReference: {fileID: 21300000, guid: 7be3db5f71d0759409fccc7aa52b5139, type: 3}
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCSprite.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: e261d279dec354148a43df185858e29e, type: 3}
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCDialogue.Array.data[0]
-      value: "Clues are turned upside down. \nArrange them by order to get the answer
-        you're looking for."
+      value: "Clues are reversed. \nArrange them by order to get the answer you're
+        looking for."
       objectReference: {fileID: 0}
     - target: {fileID: 4833600173054057232, guid: cfa1df0ec29219e44bfdedadde06c4d7, type: 3}
       propertyPath: dialogue.NPCDialogue.Array.data[1]
