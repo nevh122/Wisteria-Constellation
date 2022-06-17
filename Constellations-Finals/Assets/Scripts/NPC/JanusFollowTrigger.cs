@@ -29,6 +29,7 @@ public class JanusFollowTrigger : MonoBehaviour
             playerController.inventoryText.text += "\n - Janus";
             playerController.WithJanus = true;
             isFollowing = true;
+            dialogueManager.hasInteracted = false;
         }
         else return;
     }

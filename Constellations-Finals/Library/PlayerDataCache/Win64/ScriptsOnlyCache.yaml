@@ -31,6 +31,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.PixelPerfect.dll:
     - UnityEngine.U2D.PixelPerfectCamera
     Unity.2D.Sprite.Editor.dll:
@@ -42,6 +43,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
@@ -803,7 +805,7 @@ ScriptsOnlyBuild:
     className: Chapter1OpeningScript
   - hash:
       serializedVersion: 2
-      Hash: 8194aa8dd5df3181ebc3f6cc33254430
+      Hash: c8e4a53a2a43a82cea0bdc68aea1d5ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PushBox
@@ -1085,7 +1087,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 5868bea3ffd4c9d606cd315bc622c097
+      Hash: acaac4a95d17ba5d1b6499afa210ed60
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CodePuzzleInput

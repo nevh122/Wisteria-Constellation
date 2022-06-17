@@ -49,12 +49,14 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
             DefaultDialogue.dialogue = YesDialogueChange;
             playerController.inventoryText.text += "\n - Star Key";
             playerController.StarKey = true;
+            dialogueManager.hasInteracted = false;
         }
         else
         {
             dialogueManager.StartDialogue(YesPendant);
             TreeNymphChoicesDialogueScript.hasPicked = true;
             KillPlayer = true;
+            dialogueManager.hasInteracted = false;
         }
     }
 
@@ -67,6 +69,7 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
             TreeNymphChoicesDialogueScript.hasPicked = false;
             DefaultDialogue.dialogue = NoDialogueChange;
             TreeNymphChoicesDialogueScript.reset = true;
+            dialogueManager.hasInteracted = false;
         }
         else
         {
@@ -74,6 +77,7 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
             TreeNymphChoicesDialogueScript.hasPicked = false;
             DefaultDialogue.dialogue = NoDialogueChange;
             TreeNymphChoicesDialogueScript.reset = true;
+            dialogueManager.hasInteracted = false;
         }
     }
     //to reset choices picker after choosing no
