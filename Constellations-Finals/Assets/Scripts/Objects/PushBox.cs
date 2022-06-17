@@ -6,6 +6,7 @@ public class PushBox : MonoBehaviour
 {
     Rigidbody2D boxBody;
     public Vector3 originalPos;
+    public PlanetSlots[] planetSlots;
 
     private void Start()
     {
@@ -35,5 +36,12 @@ public class PushBox : MonoBehaviour
     public void ReturntoOriginalPosition()
     {
         transform.position = originalPos;
+        GetComponent<CircleCollider2D>().enabled = true;
+        GetComponent<PushBox>().enabled = true;
+
+        for (int i = 0; i < planetSlots.Length; ++i)
+        {
+            planetSlots[i].isRight = false;
+        }
     }
 }

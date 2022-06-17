@@ -11,18 +11,20 @@ public class NPCInteractEvent : MonoBehaviour
     PauseMenu pauseMenu;
     ChoicesDialogue choicesDialogue;
     public GameObject indicator;
+    CodePuzzleInput puzzleInput;
 
     void Start()
     {
         manager = FindObjectOfType<DialogueManager>();
         pauseMenu = FindObjectOfType<PauseMenu>();
         choicesDialogue = FindObjectOfType<ChoicesDialogue>();
+        puzzleInput = FindObjectOfType<CodePuzzleInput>();
     }
 
     //if the player press interact button and in range does the following
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isInside && pauseMenu.isOpen == false)
+        if (Input.GetKeyDown(KeyCode.E) && isInside && pauseMenu.isOpen == false && puzzleInput.isOpen == false)
         {
             if (manager.isDone && choicesDialogue.isActive == false)
             {

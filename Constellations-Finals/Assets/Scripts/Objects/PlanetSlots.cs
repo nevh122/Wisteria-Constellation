@@ -8,7 +8,7 @@ public class PlanetSlots : MonoBehaviour
     public bool isRight = false;
 
     //locks planet in slot if it is the right position
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject == planetForThisSlot)
         {

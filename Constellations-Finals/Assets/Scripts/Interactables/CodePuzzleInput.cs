@@ -14,9 +14,11 @@ public class CodePuzzleInput : MonoBehaviour
 
     public TMP_InputField PlayerInput;
     public bool CodeIsCorrect;
+    public bool isOpen = false;
     public string CorrectCode = "";
     bool CodeInputDone = true;
     bool ChangeDialogue;
+    PauseMenu pauseMenu;
 
     public DialogueBoxElements CodeFinishedDialogue;
     public DialogueBoxElements InteractAgainWhileFinished;
@@ -25,6 +27,7 @@ public class CodePuzzleInput : MonoBehaviour
         diagManager = FindObjectOfType<DialogueManager>();
         ObjectDialogue = InteractionRange.GetComponent<NPCInteractEvent>();
         DefaultDialogue = gameObject.GetComponent<NPCDialogue>();
+        pauseMenu = FindObjectOfType<PauseMenu>();
     }
     private void Update()
     {
@@ -43,12 +46,21 @@ public class CodePuzzleInput : MonoBehaviour
     //Checks when to open and close keypad code input
     void StartCodeInput()
     {
-        if (diagManager.isDone && ObjectDialogue.isInside && CodeIsCorrect == false && diagManager.hasInteracted)
+        if (diagManager.isDone && ObjectDialogue.isInside && CodeIsCorrect == false && diagManager.hasInteracted && pauseMenu.isOpen == false)
         {
             CodeInputUI.SetActive(true);
+            isOpen = true;
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                isOpen = false;
+                CodeInputUI.SetActive(false);
+                diagManager.hasInteracted = false;
+            }
         }
         else
         {
+            isOpen = false;
             CodeInputUI.SetActive(false);
         }
     }

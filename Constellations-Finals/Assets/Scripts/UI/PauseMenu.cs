@@ -9,11 +9,16 @@ public class PauseMenu : MonoBehaviour
     public GameObject player;
     public bool isOpen = false;
     public int buildIndex;
+    CodePuzzleInput puzzleInput;
+    private void Start()
+    {
+        puzzleInput = FindObjectOfType<CodePuzzleInput>();
+    }
 
     //if player press main menu button
     private void Update()
     {
-        if(isOpen == false)
+        if(isOpen == false && puzzleInput.isOpen == false)
         {
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
             {

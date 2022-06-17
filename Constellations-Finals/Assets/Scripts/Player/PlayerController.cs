@@ -18,21 +18,23 @@ public class PlayerController : MonoBehaviour
     TreeNymphChoicesDialogue treeNymph;
     ChoicesDialogue choicesDialogue;
     DialogueManager dialogueManager;
+    CodePuzzleInput puzzleInput;
 
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         choicesDialogue = FindObjectOfType<ChoicesDialogue>();
         dialogueManager = FindObjectOfType<DialogueManager>();
+        puzzleInput = FindObjectOfType<CodePuzzleInput>();
     }
     void Update()
     {
-        if (choicesDialogue.isActive || dialogueManager.isActive)
+        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen)
         {
             playerMovement.playerAnim.SetBool("IsMoving", false);
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
-        else if(choicesDialogue.isActive == false || dialogueManager.isActive == false)
+        else if(choicesDialogue.isActive == false || dialogueManager.isActive == false || puzzleInput.isOpen == false)
         {
             playerMovement.Move();
         }
