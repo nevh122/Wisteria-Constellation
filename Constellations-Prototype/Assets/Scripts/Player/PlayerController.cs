@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
     }
     
+
+    //Handles Player movement usign WASD or the Arrow Keys
     private void MovePlayer()
     {
         Vector2 direction = Vector2.zero;
