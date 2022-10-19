@@ -5,10 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float moveSpeed; 
-    void Start()
-    {
-
-    }
 
     void Update()
     {
