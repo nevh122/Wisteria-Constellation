@@ -4,26 +4,26 @@ OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'en' Physical Memory
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.33f1\Editor\Unity.exe
+P:\Unity\2020.3.33f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Ned/Documents/GitHub/Wisteria-Constellation/Constellations-Finals
+P:/Github/Wisteria-Constellation/Constellations-Finals
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60115
-Successfully changed project path to: C:/Users/Ned/Documents/GitHub/Wisteria-Constellation/Constellations-Finals
-C:/Users/Ned/Documents/GitHub/Wisteria-Constellation/Constellations-Finals
+54042
+Successfully changed project path to: P:/Github/Wisteria-Constellation/Constellations-Finals
+P:/Github/Wisteria-Constellation/Constellations-Finals
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 43.76 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 43.23 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.33f1 (915a7af8b0d5)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Ned/Documents/GitHub/Wisteria-Constellation/Constellations-Finals/Assets
+[Subsystems] Discovering subsystems at path P:/Unity/2020.3.33f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path P:/Github/Wisteria-Constellation/Constellations-Finals/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -32,93 +32,93 @@ Direct3D:
     VRAM:     4074 MB
     Driver:   30.0.15021.11005
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56764
+Mono path[0] = 'P:/Unity/2020.3.33f1/Editor/Data/Managed'
+Mono path[1] = 'P:/Unity/2020.3.33f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'P:/Unity/2020.3.33f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001585 seconds.
+Register platform support module: P:/Unity/2020.3.33f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000809 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.54 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 44.42 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.522 seconds
+- Completed reload, in  0.509 seconds
 Domain Reload Profiling:
-	ReloadAssembly (522ms)
-		BeginReloadAssembly (55ms)
+	ReloadAssembly (509ms)
+		BeginReloadAssembly (51ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (405ms)
-			LoadAssemblies (53ms)
+		EndReloadAssembly (400ms)
+			LoadAssemblies (51ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (131ms)
+			SetupTypeCache (132ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (157ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (158ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (45ms)
-				BeforeProcessingInitializeOnLoad (14ms)
-				ProcessInitializeOnLoadAttributes (70ms)
-				ProcessInitializeOnLoadMethodAttributes (24ms)
+				RefreshPlugins (44ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (69ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002812 seconds.
+Registered in 0.001716 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Ned\Documents\GitHub\Wisteria-Constellation\Constellations-Finals\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Symbol file LoadedFromMemory doesn't match image P:\Github\Wisteria-Constellation\Constellations-Finals\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 43.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 43.20 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.985 seconds
+- Completed reload, in  0.972 seconds
 Domain Reload Profiling:
-	ReloadAssembly (986ms)
-		BeginReloadAssembly (131ms)
+	ReloadAssembly (972ms)
+		BeginReloadAssembly (132ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (801ms)
-			LoadAssemblies (86ms)
+		EndReloadAssembly (792ms)
+			LoadAssemblies (81ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (256ms)
+			SetupTypeCache (259ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (312ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (294ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (44ms)
-				BeforeProcessingInitializeOnLoad (74ms)
-				ProcessInitializeOnLoadAttributes (171ms)
+				RefreshPlugins (43ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (164ms)
 				ProcessInitializeOnLoadMethodAttributes (14ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
 Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2242 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 100.9 MB.
+System memory in use before: 100.2 MB.
+System memory in use after: 100.2 MB.
 
 Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2677.
-Total: 2.574100 ms (FindLiveObjects: 0.146700 ms CreateObjectMapping: 0.086100 ms MarkObjects: 2.225400 ms  DeleteObjects: 0.115400 ms)
+Total: 2.723700 ms (FindLiveObjects: 0.153900 ms CreateObjectMapping: 0.080400 ms MarkObjects: 2.366200 ms  DeleteObjects: 0.122600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -132,40 +132,175 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Assets/Environment/Gazebo Old.png
-  artifactKey: Guid(f35e9515c091737438dda9aa3380e5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Environment/Gazebo Old.png using Guid(f35e9515c091737438dda9aa3380e5d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c69a64c209cdba1560f5ba8c3cbfca2') in 0.113643 seconds 
+  path: Assets/Assets/Characters/Rigel/Rigel_Portrait.png
+  artifactKey: Guid(e261d279dec354148a43df185858e29e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel_Portrait.png using Guid(e261d279dec354148a43df185858e29e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0cee32340a0400b641f609400200bad') in 0.086139 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.375378 seconds.
-  path: Assets/Assets/Environment/Gazebo.png
-  artifactKey: Guid(b09f23712aa022145922d5939c11511f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Environment/Gazebo.png using Guid(b09f23712aa022145922d5939c11511f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b3ec1bb71f43ac0aadbef5c7667e6c9') in 0.011393 seconds 
+  Time since last request: 0.000104 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel_Full.png
+  artifactKey: Guid(2c9f9edbeea17b448b5b8bfb402a5005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel_Full.png using Guid(2c9f9edbeea17b448b5b8bfb402a5005) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '000e45d15840aa1b7ab8aa577d3a4596') in 0.032275 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.515600 seconds.
-  path: Assets/Assets/Environment/Gazebo.png
-  artifactKey: Guid(b09f23712aa022145922d5939c11511f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/Environment/Gazebo.png using Guid(b09f23712aa022145922d5939c11511f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13fc84b801cefb9fc688d00734d789f9') in 0.009939 seconds 
+  Time since last request: 0.000112 seconds.
+  path: Assets/Assets/Characters/Rigel
+  artifactKey: Guid(470fc05503160114696cdda9a6fca01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel using Guid(470fc05503160114696cdda9a6fca01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26b94f72793dd62bdc37cfca43e9f0db') in 0.004193 seconds 
 ========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 3.14 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.2 MB.
-System memory in use after: 58.2 MB.
-
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2683.
-Total: 3.594500 ms (FindLiveObjects: 0.178700 ms CreateObjectMapping: 0.087200 ms MarkObjects: 3.226700 ms  DeleteObjects: 0.101100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 1.311172 seconds.
+  path: Assets/Assets/Characters/Rigel/Anims
+  artifactKey: Guid(0d2b320a36025de4db4bfcf37205db77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Anims using Guid(0d2b320a36025de4db4bfcf37205db77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3ea709fe7c04cc87ff37628f338822c') in 0.004501 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.471834 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites
+  artifactKey: Guid(02f5257c9d30d02489722ee4b5b7cbb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites using Guid(02f5257c9d30d02489722ee4b5b7cbb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78d1b5d1cd3f69f736f8c0e568c44014') in 0.005708 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.049448 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite1.png
+  artifactKey: Guid(b1c1b7c57d9644b46879fb6a6c89cee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite1.png using Guid(b1c1b7c57d9644b46879fb6a6c89cee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12e00519bcba1b476df1487a83b0845a') in 0.010830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite12.png
+  artifactKey: Guid(af7fb5335be14f1449c7411daddd3cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite12.png using Guid(af7fb5335be14f1449c7411daddd3cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a53c0236b1fd3c872463322573a939a') in 0.012748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite10.png
+  artifactKey: Guid(e0873f2b7dd93dd48a96a5f3a470ee39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite10.png using Guid(e0873f2b7dd93dd48a96a5f3a470ee39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd72b559255dd623dce935908f454976f') in 0.009930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite15.png
+  artifactKey: Guid(72ef3de1dfff82f448be5dc65b0bf043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite15.png using Guid(72ef3de1dfff82f448be5dc65b0bf043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de3ed577a0ba4439eb30b76dc15d9728') in 0.009807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite2.png
+  artifactKey: Guid(c32a6a01f3c1e7041b9d942f953234d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite2.png using Guid(c32a6a01f3c1e7041b9d942f953234d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a9235021b0a3993efa692788766b3c') in 0.009333 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite3.png
+  artifactKey: Guid(aec92df616192414fb3e8fdf2479ad58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite3.png using Guid(aec92df616192414fb3e8fdf2479ad58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e93082a81044965942efc545f8039e33') in 0.009159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite9.png
+  artifactKey: Guid(20264bc3d45dafe44aa4c254c7018b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite9.png using Guid(20264bc3d45dafe44aa4c254c7018b00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cceb682c72d7db05b6df69741356e619') in 0.010348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite8.png
+  artifactKey: Guid(9cb93571a9dd71c4098cbd0fe79013cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite8.png using Guid(9cb93571a9dd71c4098cbd0fe79013cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ebcc0bdd7b6a0e79bc30e4be27016bb') in 0.008879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite4.png
+  artifactKey: Guid(d5b57f47822a65e42be1034bd4d1ad9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite4.png using Guid(d5b57f47822a65e42be1034bd4d1ad9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4191933b2638a18d6ad0084d8072d59') in 0.009390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite6.png
+  artifactKey: Guid(c480728668543c1479e4bd4e61d0a6d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite6.png using Guid(c480728668543c1479e4bd4e61d0a6d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eab9ad2aaaf27ba92d5511bb745ef08') in 0.010266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite16.png
+  artifactKey: Guid(6238c28b863c5694ba9434cb01f37521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite16.png using Guid(6238c28b863c5694ba9434cb01f37521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0df46542894fb4cb755594873a19a03') in 0.008872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite7.png
+  artifactKey: Guid(d6b696e7dcbddd64e8e96f27f72d7fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite7.png using Guid(d6b696e7dcbddd64e8e96f27f72d7fd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3be5b5514c9698fe8ac63c89d279df9') in 0.009471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite11.png
+  artifactKey: Guid(febc59a788ca84949a1aa6525ed294cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite11.png using Guid(febc59a788ca84949a1aa6525ed294cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd03f46e1aea4424786d393568e9157f7') in 0.009797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite13.png
+  artifactKey: Guid(982fa59bea8f2cb43b4b1caf9d3965e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite13.png using Guid(982fa59bea8f2cb43b4b1caf9d3965e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a846c62d627c14ddee236c226dd2b42f') in 0.009272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite19.png
+  artifactKey: Guid(5a6134657feda154081ec5d21975c895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite19.png using Guid(5a6134657feda154081ec5d21975c895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff21c6bd9521e73b84c3544100c54625') in 0.009125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite21.png
+  artifactKey: Guid(e6d5c19d3f2c65041a1ca841bf18ca85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite21.png using Guid(e6d5c19d3f2c65041a1ca841bf18ca85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c5a7a90a5cb08532b9bd970a3241284') in 0.009269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite14.png
+  artifactKey: Guid(411a24a65a120f446959088613e25c6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite14.png using Guid(411a24a65a120f446959088613e25c6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fbeecdd9257a11a6243d3011fbd45b6') in 0.009715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite17.png
+  artifactKey: Guid(78deb9bc6f3117a49990af15c235b2ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite17.png using Guid(78deb9bc6f3117a49990af15c235b2ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd79c67208833052c22d23f08ea0f1ab9') in 0.009492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite20.png
+  artifactKey: Guid(344d2c9e77ab1cf4386b6e126580e05e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite20.png using Guid(344d2c9e77ab1cf4386b6e126580e05e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5863b10f7457f8353a5f42b019252811') in 0.008903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite18.png
+  artifactKey: Guid(74777a7bb6377bf49a52255e337e2929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite18.png using Guid(74777a7bb6377bf49a52255e337e2929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da76622fe2355ebc03cbffeefc8123e') in 0.010121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite5.png
+  artifactKey: Guid(d1dfb9fbbae834749aa66af4dd0e5f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite5.png using Guid(d1dfb9fbbae834749aa66af4dd0e5f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19329a93cc7d373c45097722093c462d') in 0.009540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite23.png
+  artifactKey: Guid(f9756024d8afd1c46a0f4f4f6125f5a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite23.png using Guid(f9756024d8afd1c46a0f4f4f6125f5a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74bdce485aa823e115e90e485cf1e62b') in 0.010376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite24.png
+  artifactKey: Guid(1ef10b3fce075364da903e1b7ad3a258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite24.png using Guid(1ef10b3fce075364da903e1b7ad3a258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbc37404677dd8c2766debd506f5193b') in 0.009266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000125 seconds.
+  path: Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite22.png
+  artifactKey: Guid(19aa99a3f0cde12459c6ce3fc8c85622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Characters/Rigel/Rigel Sprites/Rigel Sprite22.png using Guid(19aa99a3f0cde12459c6ce3fc8c85622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04e23a8c3e7d031c9f94f4a249e08dae') in 0.009907 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638015975516093144
-    m_Hash: 3937868600
+      ticks: 638018667224833045
+    m_Hash: 1819720385
   m_LockFileStatus:
     m_FilePath: P:/Github/Wisteria-Constellation/Constellations-Prototype/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638015975663701136
-    m_Hash: 4176202931
+      ticks: 638018667224922804
+    m_Hash: 1972075982
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -137,6 +137,7 @@ m_PackageAssets:
         - 8.0.1
         - 8.0.2
         - 8.0.3
+        - 8.0.4
         - 9.0.0-pre.1
         - 9.0.0-pre.3
         - 9.0.0
@@ -359,6 +360,7 @@ m_PackageAssets:
         - 7.0.0
         - 7.0.1
         - 7.0.2
+        - 7.0.3
         - 8.0.0-pre.1
         - 8.0.0-pre.3
         - 8.0.0
@@ -749,6 +751,7 @@ m_PackageAssets:
         - 1.17.0
         - 1.17.1
         - 1.17.2
+        - 1.17.6
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -761,6 +764,7 @@ m_PackageAssets:
         - 2.1.0-preview.6
         compatible:
         - 1.17.2
+        - 1.17.6
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -771,7 +775,7 @@ m_PackageAssets:
         - 2.1.0-preview.3
         - 2.1.0-preview.5
         - 2.1.0-preview.6
-        verified: 1.17.2
+        verified: 1.17.6
       dependencies:
       - name: com.unity.services.core
         version: 1.0.1
@@ -867,6 +871,7 @@ m_PackageAssets:
         - 3.0.13
         - 3.0.14
         - 3.0.15
+        - 3.0.16
         compatible:
         - 1.0.2
         - 1.0.6
@@ -899,7 +904,8 @@ m_PackageAssets:
         - 3.0.13
         - 3.0.14
         - 3.0.15
-        verified: 3.0.15
+        - 3.0.16
+        verified: 3.0.16
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -1095,6 +1101,101 @@ m_PackageAssets:
         url: https://github.com/Unity-Technologies/com.unity.ide.vscode.git
         revision: b0740c80bfc2440527c317109f7c3d9100132722
         path: 
+    - packageId: com.unity.postprocessing@3.2.2
+      testable: 0
+      isDirectDependency: 1
+      version: 3.2.2
+      source: 1
+      resolvedPath: P:\Github\Wisteria-Constellation\Constellations-Prototype\Library\PackageCache\com.unity.postprocessing@3.2.2
+      assetPath: Packages/com.unity.postprocessing
+      name: com.unity.postprocessing
+      displayName: Post Processing
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The post-processing stack (v2) comes with a collection of effects
+        and image filters you can apply to your cameras to improve the visuals of
+        your games.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.7
+        - 0.1.8
+        - 2.0.0-beta
+        - 2.0.1-beta
+        - 2.0.2-preview
+        - 2.0.3-preview
+        - 2.0.5-preview
+        - 2.0.7-preview
+        - 2.0.8-preview
+        - 2.0.9-preview
+        - 2.0.10-preview
+        - 2.0.11-preview
+        - 2.0.12-preview
+        - 2.0.13-preview
+        - 2.0.14-preview
+        - 2.0.15-preview
+        - 2.0.16-preview
+        - 2.0.17-preview
+        - 2.1.0
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3
+        - 2.1.4
+        - 2.1.5
+        - 2.1.6
+        - 2.1.7
+        - 2.2.1
+        - 2.2.2
+        - 2.3.0
+        - 3.0.1
+        - 3.0.3
+        - 3.1.0
+        - 3.1.1
+        - 3.2.0
+        - 3.2.1
+        - 3.2.2
+        compatible:
+        - 2.3.0
+        - 3.0.1
+        - 3.0.3
+        - 3.1.0
+        - 3.1.1
+        - 3.2.0
+        - 3.2.1
+        - 3.2.2
+        verified: 3.2.2
+      dependencies:
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637855259850000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/Unity-Technologies/Graphics.git
+        revision: 815ce78463c7d3006fa97cd6e8898d91cb9c3ebf
+        path: 
     - packageId: com.unity.test-framework@1.1.31
       testable: 0
       isDirectDependency: 1
@@ -1149,12 +1250,14 @@ m_PackageAssets:
         - 1.1.30
         - 1.1.31
         - 1.1.33
+        - 1.3.0
         - 2.0.1-exp.1
         - 2.0.1-pre.12
         - 2.0.1-pre.18
         compatible:
         - 1.1.31
         - 1.1.33
+        - 1.3.0
         - 2.0.1-exp.1
         - 2.0.1-pre.12
         - 2.0.1-pre.18
@@ -3437,6 +3540,7 @@ m_PackageAssets:
         - 1.4.1
         - 1.4.2
         - 1.4.3
+        - 1.5.2
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3453,6 +3557,7 @@ m_PackageAssets:
         - 1.4.1
         - 1.4.2
         - 1.4.3
+        - 1.5.2
         verified: 1.4.3
       dependencies:
       - name: com.unity.modules.unitywebrequest
@@ -3621,6 +3726,7 @@ m_PackageAssets:
         - 7.0.0-pre.4
         - 7.0.0
         - 7.0.1
+        - 7.0.2
         - 8.0.0-pre.1
         - 8.0.0-pre.2
         - 8.0.0
