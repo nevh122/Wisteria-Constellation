@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
     }
     
-
     //Handles Player movement using WASD or the Arrow Keys with animations
     public void MovePlayer()
     {

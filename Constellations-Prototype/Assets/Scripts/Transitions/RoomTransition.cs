@@ -17,7 +17,7 @@ public class RoomTransition : MonoBehaviour
     }
 
     //sensor for teleport
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
@@ -32,7 +32,7 @@ public class RoomTransition : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             //Add better solution to this later since player should not rotate
-            playerRBody.constraints = RigidbodyConstraints2D.None;
+            playerRBody.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
             TransitionAnimation.SetBool("Fade", false);
         }
     }
@@ -41,7 +41,7 @@ public class RoomTransition : MonoBehaviour
     IEnumerator Fade()
     {
         TransitionAnimation.SetBool("Fade", true);
-        playerRBody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        playerRBody.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitUntil(() => TransitionImage.color.a == 1);
         Player.transform.position = locationEndPoint;
     }
