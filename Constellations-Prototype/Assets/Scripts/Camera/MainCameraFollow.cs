@@ -6,6 +6,8 @@ public class MainCameraFollow : MonoBehaviour
 {
     public Transform player;
     public float chaseSpeed = 10f;
+    //zoom to player or distance of camera from the player on the z axis
+    public float distanceToPlayer;
 
     Vector3 offset;
     Vector3 playerPos;
@@ -13,7 +15,7 @@ public class MainCameraFollow : MonoBehaviour
     //Centers the camera at the start to player, then calculates the offset
     void Start()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, -10f);
+        transform.position = new Vector3(player.position.x, player.position.y, distanceToPlayer);
         offset = transform.position - player.position;
     }
 
