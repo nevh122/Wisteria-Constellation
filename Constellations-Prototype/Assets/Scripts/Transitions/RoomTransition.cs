@@ -10,6 +10,7 @@ public class RoomTransition : MonoBehaviour
     public Image TransitionImage;
     public Animator TransitionAnimation;
     public GameObject Player;
+    public PlayerController playerController;
 
     private void Start()
     {
@@ -31,15 +32,16 @@ public class RoomTransition : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            //Add better solution to this later since player should not rotate
             playerRBody.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+            Player.gameObject.GetComponent<PlayerController>().enabled = true;
             TransitionAnimation.SetBool("Fade", false);
         }
     }
 
-    //Triggers teleport and fade effect
+    //Triggers teleport and fade effect, also disables player control when player is teleporting
     IEnumerator Fade()
     {
+        Player.gameObject.GetComponent<PlayerController>().enabled = false;
         TransitionAnimation.SetBool("Fade", true);
         playerRBody.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitUntil(() => TransitionImage.color.a == 1);
