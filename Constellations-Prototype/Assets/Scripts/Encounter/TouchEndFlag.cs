@@ -13,6 +13,7 @@ public class TouchEndFlag : MonoBehaviour
     public Camera EncounterCamera;
 
     public GameObject Player;
+    public EncounterChecker encounterChecker;
 
     //Teleports player out of encounter and back to main game with full sanity when they collide with the end flag;
     public void OnTriggerStay2D(Collider2D col)
@@ -25,12 +26,16 @@ public class TouchEndFlag : MonoBehaviour
     IEnumerator PlayerEscape()
     {
         miniPlayer.gameObject.GetComponent<MiniPlayerControl>().enabled = false;
+        miniPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         TransitionAnimation.SetBool("Fade", true);
         yield return new WaitUntil(() => TransitionImage.color.a == 1);
         EncounterCamera.enabled = false;
-        Player.GetComponent<PlayerController>().enabled = true;
-        MainCamera.enabled = true;
+
         Player.GetComponent<PlayerStats>().PlayerSanity = 50f;
+        encounterChecker.inEncounter = false;
+        MainCamera.enabled = true;
+        Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+        Player.GetComponent<PlayerController>().enabled = true;
         TransitionAnimation.SetBool("Fade", false);
     }
 }
