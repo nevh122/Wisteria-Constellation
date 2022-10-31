@@ -123,6 +123,22 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &1117554214 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5517345598228156447, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
+  m_PrefabInstance: {fileID: 5517345598416938808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1572363875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5517345597845932419, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
+  m_PrefabInstance: {fileID: 5517345598416938808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1713582881
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +150,7 @@ GameObject:
   - component: {fileID: 1713582884}
   - component: {fileID: 1713582883}
   - component: {fileID: 1713582882}
+  - component: {fileID: 1713582885}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -189,6 +206,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713582885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713582881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706ca5ace4ed60f4e8c5412d26ca0ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutscene: {fileID: 1861603110}
+  transitionImage: {fileID: 1572363875}
+  transitionAnim: {fileID: 1117554214}
 --- !u!1 &1861603105
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
       propertyPath: whenInvoked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5517345598416938809}
+      objectReference: {fileID: 0}
     - target: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
       propertyPath: whenInvoked.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -379,6 +411,10 @@ PrefabInstance:
     - target: {fileID: 5517345598228156445, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
       propertyPath: m_Name
       value: LevelTransitionEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517345598228156445, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5517345598228156446, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
       propertyPath: m_RootOrder
@@ -426,14 +462,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
---- !u!114 &5517345598416938809 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
-  m_PrefabInstance: {fileID: 5517345598416938808}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 652f5765e99c19a4f87292ce5f90a321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

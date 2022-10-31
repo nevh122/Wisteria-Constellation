@@ -1,35 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public Animator Transition;
-    public Animator MenuButtons;
-    public Animator HowToPlay;
+    public Animator transitionAnim;
+    public Image transitionImage;
+    public GameObject MenuButtons;
+    public GameObject HowToPlay;
 
     //to be called by buttons in main menu screen
     private void Start()
     {
-        MenuButtons.SetBool("IsOpen", true);
-        HowToPlay.SetBool("IsOpen", false);
+        MenuButtons.SetActive(true);
+        HowToPlay.SetActive(false);
     }
+
     public void StartGame()
     {
-        Transition.SetTrigger("Transition");
+        StartCoroutine(StartFunction());
     }
+
     public void OpenHowToPlay()
     {
-        MenuButtons.SetBool("IsOpen", false);
-        HowToPlay.SetBool("IsOpen", true);
+        MenuButtons.SetActive(false);
+        HowToPlay.SetActive(true);
     }
+
     public void CloseHowToPlay()
     {
-        MenuButtons.SetBool("IsOpen", true);
-        HowToPlay.SetBool("IsOpen", false);
+        MenuButtons.SetActive(true);
+        HowToPlay.SetActive(false);
     }
+
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    IEnumerator StartFunction()
+    {
+        transitionAnim.SetBool("Transition", true);
+        yield return new WaitUntil(() => transitionImage.color.a == 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

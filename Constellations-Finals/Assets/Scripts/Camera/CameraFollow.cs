@@ -6,6 +6,8 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform player;
     public float chaseSpeed = 10f;
+    //zoom on the player based on the z axis
+    public float distanceToPlayer;
 
     Vector3 offset;
     Vector3 playerPos;
@@ -13,6 +15,7 @@ public class CameraFollow : MonoBehaviour
     //Places camera away from player
     void Start()
     {
+        transform.position = new Vector3(player.position.x, player.position.y, distanceToPlayer);
         offset = transform.position - player.position;
     }
 
