@@ -6,12 +6,12 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject DialogueUI;
     public TextMeshProUGUI nameText, dialogueText;
     public Image NPCIco;
     private Queue<string> sentences, names;
     private Queue<Sprite> icons;
 
-    public Animator DiagBox;
     public bool isDone;
     public bool hasInteracted;
     public bool isActive = false;
@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
         names.Clear();
         icons.Clear();
 
-        DiagBox.SetBool("IsOpen", true);
+        DialogueUI.SetActive(true);
         //Enqueues new dialogue
         foreach (string name in dialogue.NPCName)
         {
@@ -54,10 +54,6 @@ public class DialogueManager : MonoBehaviour
         //Dequeue the dilogue in order of the array
         if (sentences.Count == 0)
         {
-            //to use by other scripts if the dialogue is done
-            hasInteracted = true;
-            isActive = false;
-            isDone = true;
             EndDialogue();
             return;
         }
@@ -68,10 +64,13 @@ public class DialogueManager : MonoBehaviour
         nameText.text = name;
         NPCIco.sprite = icon;
     }
+
+    //to use by other scripts if the dialogue is done
     public void EndDialogue()
     {
-        isActive = false;
         isDone = true;
-        DiagBox.SetBool("IsOpen", false);   
+        hasInteracted = true;
+        isActive = false;
+        DialogueUI.SetActive(false);   
     }
 }

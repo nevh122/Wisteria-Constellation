@@ -7,13 +7,11 @@ using UnityEngine.Events;
 
 public class ChoicesDialogue : MonoBehaviour
 {
-
     DialogueManager diagManager;
     NPCInteractEvent ObjectDialogue;
     public GameObject ChoicesUI;
     public GameObject InteractionRange;
     NPCDialogue DefaultDialogue;
-    Animator DialogueAnimator;
 
     public TMP_Text button1, button2, ChoicesQuestion;
     [SerializeField] string button1Text, button2Text, ChoicesQuestionText;
@@ -31,7 +29,6 @@ public class ChoicesDialogue : MonoBehaviour
         diagManager = FindObjectOfType<DialogueManager>();
         ObjectDialogue = InteractionRange.GetComponent<NPCInteractEvent>();
         DefaultDialogue = gameObject.GetComponent<NPCDialogue>();
-        DialogueAnimator = ChoicesUI.GetComponent<Animator>();
     }
     private void Update()
     {
@@ -44,11 +41,11 @@ public class ChoicesDialogue : MonoBehaviour
         if (diagManager.isDone && ObjectDialogue.isInside && diagManager.hasInteracted && hasPicked == false && reset == false)
         {
             isActive = true;
-            DialogueAnimator.SetBool("IsOpen",true);
+            ChoicesUI.SetActive(true);
         }
         else
         {
-            DialogueAnimator.SetBool("IsOpen",false);
+            ChoicesUI.SetActive(false);
         }
     }
 
@@ -56,13 +53,13 @@ public class ChoicesDialogue : MonoBehaviour
     public void Choice1Button()
     {
         isActive = false;
-        DialogueAnimator.SetBool("IsOpen", false);
+        ChoicesUI.SetActive(false);
         WhenButton1Pressed.Invoke();
     }
     public void Choice2Button()
     {
         isActive = false;
-        DialogueAnimator.SetBool("IsOpen", false);
+        ChoicesUI.SetActive(true);
         WhenButton2Pressed.Invoke();
     }
 }

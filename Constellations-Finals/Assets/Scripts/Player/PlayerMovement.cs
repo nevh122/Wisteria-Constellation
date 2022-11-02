@@ -8,10 +8,12 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     public Animator playerAnim;
-    private void Start()
+
+    public void Update()
     {
-        playerAnim = GetComponent<Animator>();
+        Move();
     }
+
     public void Move()
     {
         Vector2 direction = Vector2.zero;

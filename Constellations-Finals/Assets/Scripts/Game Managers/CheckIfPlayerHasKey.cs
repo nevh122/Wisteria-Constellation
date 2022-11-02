@@ -7,25 +7,23 @@ using UnityEngine.Events;
 //Checks if player has necessary key to progress
 public class CheckIfPlayerHasKey : MonoBehaviour
 {
-    PlayerController playerController;
+    public PlayerController playerController;
     [SerializeField] DialogueBoxElements dialogueIfLocked;
     public UnityEvent IfPlayerHasAMissingItem;
 
-    void Start()
-    {
-        playerController = FindObjectOfType<PlayerController>();
-    }
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
             IfPlayerHasAMissingItem.Invoke();
-            Invoke("CloseDialogue", 2);
+            StartCoroutine(CloseDialogue());
         }
     }
-    public void CloseDialogue()
+    IEnumerator CloseDialogue()
     {
+        yield return new WaitForSeconds(2f);
         FindObjectOfType<DialogueManager>().EndDialogue();
+        FindObjectOfType<DialogueManager>().hasInteracted = false;
     }
 
     //to be called by a specific door
@@ -33,6 +31,7 @@ public class CheckIfPlayerHasKey : MonoBehaviour
     {
         if (playerController.Sunkey == true)
         {
+            gameObject.GetComponent<RoomTeleport>().enabled = true;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
         else if (playerController.Sunkey == false)
@@ -44,6 +43,7 @@ public class CheckIfPlayerHasKey : MonoBehaviour
     {
         if (playerController.StarKey == true)
         {
+            gameObject.GetComponent<RoomTeleport>().enabled = true;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
         else if (playerController.StarKey == false)
@@ -55,6 +55,7 @@ public class CheckIfPlayerHasKey : MonoBehaviour
     {
         if (playerController.WithJanus == true)
         {
+            gameObject.GetComponent<RoomTeleport>().enabled = true;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
         else if (playerController.WithJanus == false)
@@ -66,6 +67,7 @@ public class CheckIfPlayerHasKey : MonoBehaviour
     {
         if (playerController.MoonKey== true)
         {
+            gameObject.GetComponent<RoomTeleport>().enabled = true;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
         else if (playerController.MoonKey == false)

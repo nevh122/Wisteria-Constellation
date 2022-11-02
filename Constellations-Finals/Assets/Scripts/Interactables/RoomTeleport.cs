@@ -8,7 +8,6 @@ public class RoomTeleport : MonoBehaviour
     [SerializeField] Vector2 teleportLocation;
 
     Rigidbody2D playerRbody;
-    PlayerController playerController;
     public GameObject Player;
 
     public Animator transitionAnim;
@@ -16,7 +15,6 @@ public class RoomTeleport : MonoBehaviour
 
     public void Start()
     {
-        playerController = Player.GetComponent<PlayerController>();
         playerRbody = Player.GetComponent<Rigidbody2D>();
     }
 
@@ -35,7 +33,7 @@ public class RoomTeleport : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerRbody.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-            Player.gameObject.GetComponent<PlayerController>().enabled = true;
+            Player.gameObject.GetComponent<PlayerMovement>().enabled = true;
             transitionAnim.SetBool("Transition", false);
         }
     }
@@ -43,7 +41,7 @@ public class RoomTeleport : MonoBehaviour
     //teleports player to location and disables movement
     IEnumerator StartTeleport()
     {
-        Player.gameObject.GetComponent<PlayerController>().enabled = false;
+        Player.gameObject.GetComponent<PlayerMovement>().enabled = false;
         transitionAnim.SetBool("Transition", true);
         playerRbody.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitUntil(() => transitionImage.color.a == 1);

@@ -5,6 +5,8 @@ using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
+//handles what will happen once the cutscene is finished
 public class CutsceneManager : MonoBehaviour
 {
     public VideoPlayer cutscene;

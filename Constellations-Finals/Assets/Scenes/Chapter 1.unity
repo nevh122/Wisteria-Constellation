@@ -263,8 +263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportLocation: {x: 85.07, y: 27.95}
   Player: {fileID: 323079778}
-  transitionAnim: {fileID: 0}
-  transitionImage: {fileID: 0}
+  transitionAnim: {fileID: 5517345596876506394}
+  transitionImage: {fileID: 5517345597586906246}
 --- !u!212 &11613493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a857821d43272448d2ef710369d0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 323079780}
   dialogueIfLocked:
     NPCName:
     - System
@@ -1160,8 +1161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportLocation: {x: 16.86, y: 16.59}
   Player: {fileID: 323079778}
-  transitionAnim: {fileID: 0}
-  transitionImage: {fileID: 0}
+  transitionAnim: {fileID: 5517345596876506394}
+  transitionImage: {fileID: 5517345597586906246}
 --- !u!212 &130198563
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2433,10 +2434,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c18f119c9a8e043b4ed5ec5cad2f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueUI: {fileID: 2036278004}
   nameText: {fileID: 1959796402}
   dialogueText: {fileID: 717189368}
   NPCIco: {fileID: 941808087}
-  DiagBox: {fileID: 2036278006}
   isDone: 1
   hasInteracted: 0
   isActive: 0
@@ -3144,7 +3145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
-  playerAnim: {fileID: 0}
+  playerAnim: {fileID: 323079785}
 --- !u!114 &323079780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3157,6 +3158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6622879c5ce094ba72675cda9b3be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 323079779}
   Sunkey: 0
   StarKey: 0
   WithJanus: 0
@@ -3164,6 +3166,9 @@ MonoBehaviour:
   CloverLeaf: 0
   inventoryText: {fileID: 690094510}
   DeathTransition: {fileID: 1831655444}
+  choicesDialogue: {fileID: 1042014498}
+  dialogueManager: {fileID: 260385657}
+  puzzleInput: {fileID: 1435855236}
 --- !u!212 &323079781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7032,8 +7037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportLocation: {x: 36.96, y: 12.94}
   Player: {fileID: 323079778}
-  transitionAnim: {fileID: 0}
-  transitionImage: {fileID: 0}
+  transitionAnim: {fileID: 5517345596876506394}
+  transitionImage: {fileID: 5517345597586906246}
 --- !u!212 &562794458
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15469,7 +15474,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778250264}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
@@ -31930,8 +31935,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportLocation: {x: -48.53, y: 17.51}
   Player: {fileID: 323079778}
-  transitionAnim: {fileID: 0}
-  transitionImage: {fileID: 0}
+  transitionAnim: {fileID: 5517345596876506394}
+  transitionImage: {fileID: 5517345597586906246}
 --- !u!212 &947699926
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31995,6 +32000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a857821d43272448d2ef710369d0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 323079780}
   dialogueIfLocked:
     NPCName:
     - System
@@ -32230,8 +32236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportLocation: {x: 102.45, y: -19.1}
   Player: {fileID: 323079778}
-  transitionAnim: {fileID: 0}
-  transitionImage: {fileID: 0}
+  transitionAnim: {fileID: 5517345596876506394}
+  transitionImage: {fileID: 5517345597586906246}
 --- !u!212 &992956661
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32295,6 +32301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a857821d43272448d2ef710369d0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 323079780}
   dialogueIfLocked:
     NPCName:
     - System
@@ -33365,6 +33372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a857821d43272448d2ef710369d0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 323079780}
   dialogueIfLocked:
     NPCName:
     - System
@@ -38658,7 +38666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1354501745
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39028,8 +39036,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportLocation: {x: 27.93, y: -28.41}
   Player: {fileID: 323079778}
-  transitionAnim: {fileID: 0}
-  transitionImage: {fileID: 0}
+  transitionAnim: {fileID: 5517345596876506394}
+  transitionImage: {fileID: 5517345597586906246}
 --- !u!212 &1406779782
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40914,7 +40922,7 @@ GameObject:
   - component: {fileID: 1599366949}
   - component: {fileID: 1599366948}
   m_Layer: 5
-  m_Name: Button2
+  m_Name: ChoiceButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42828,8 +42836,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportLocation: {x: 36.87, y: 20.09}
   Player: {fileID: 323079778}
-  transitionAnim: {fileID: 0}
-  transitionImage: {fileID: 0}
+  transitionAnim: {fileID: 5517345596876506394}
+  transitionImage: {fileID: 5517345597586906246}
 --- !u!212 &1764017741
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43751,7 +43759,7 @@ PrefabInstance:
     - target: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
       propertyPath: whenInvoked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1831655443}
+      objectReference: {fileID: 0}
     - target: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
       propertyPath: whenInvoked.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -43844,17 +43852,6 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &1831655443 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5517345598228156432, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
-  m_PrefabInstance: {fileID: 1831655439}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831655441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 652f5765e99c19a4f87292ce5f90a321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1831655444 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5517345598228156447, guid: c6ff1425d96f8f247832a67d4c7a983e, type: 3}
@@ -45203,8 +45200,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946267605}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.17689931, y: -5.72, z: 2.5817575}
-  m_LocalScale: {x: 3.0136812, y: 0.97086775, z: 1}
+  m_LocalPosition: {x: 0.1894, y: -5.6747, z: 2.5817575}
+  m_LocalScale: {x: 3.000955, y: 0.8801887, z: 1}
   m_Children: []
   m_Father: {fileID: 1491081780}
   m_RootOrder: 1
@@ -45249,8 +45246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportLocation: {x: 27.55, y: 23.16}
   Player: {fileID: 323079778}
-  transitionAnim: {fileID: 0}
-  transitionImage: {fileID: 0}
+  transitionAnim: {fileID: 5517345596876506394}
+  transitionImage: {fileID: 5517345597586906246}
 --- !u!212 &1946267609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45848,14 +45845,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1984359866}
-  - component: {fileID: 1984359867}
   m_Layer: 5
   m_Name: ChoicesUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1984359866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45879,25 +45875,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 18}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1984359867
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984359865}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92231438a354d8d4d94807572b87487e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2012627969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1631352834540321006, guid: c2777213957fc21418da68e3249874de, type: 3}
@@ -46302,14 +46279,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036278005}
-  - component: {fileID: 2036278006}
   m_Layer: 5
   m_Name: DialogueUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2036278005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46334,25 +46310,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 18}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &2036278006
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036278004}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92231438a354d8d4d94807572b87487e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2037892208
 GameObject:
   m_ObjectHideFlags: 0
@@ -47809,7 +47766,7 @@ GameObject:
   - component: {fileID: 2135897014}
   - component: {fileID: 2135897013}
   m_Layer: 5
-  m_Name: Button1
+  m_Name: ChoiceButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48050,7 +48007,7 @@ GameObject:
   - component: {fileID: 2142929982}
   - component: {fileID: 2142929981}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: E prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
