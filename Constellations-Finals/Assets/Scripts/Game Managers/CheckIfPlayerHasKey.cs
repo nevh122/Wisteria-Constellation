@@ -10,11 +10,14 @@ public class CheckIfPlayerHasKey : MonoBehaviour
     public PlayerController playerController;
     [SerializeField] DialogueBoxElements dialogueIfLocked;
     public UnityEvent IfPlayerHasAMissingItem;
+    public GameObject ePrompt;
 
+    //used to attach script to a door
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
+            ePrompt.SetActive(false);
             IfPlayerHasAMissingItem.Invoke();
             StartCoroutine(CloseDialogue());
         }
@@ -24,6 +27,7 @@ public class CheckIfPlayerHasKey : MonoBehaviour
         yield return new WaitForSeconds(2f);
         FindObjectOfType<DialogueManager>().EndDialogue();
         FindObjectOfType<DialogueManager>().hasInteracted = false;
+        ePrompt.SetActive(true);
     }
 
     //to be called by a specific door

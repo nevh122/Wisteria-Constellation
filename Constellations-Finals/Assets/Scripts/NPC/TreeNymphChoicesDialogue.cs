@@ -33,8 +33,7 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
         //kills player if using pendant
         if(KillPlayer && dialogueManager.hasInteracted && dialogueManager.isDone)
         {
-            playerController.enabled = false;
-            playerController.CheckPlayerDead();
+            playerController.playerIsDead = true;
             dialogueManager.hasInteracted = false;
         }
     }
