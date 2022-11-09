@@ -5,8 +5,8 @@ using UnityEngine;
 public class PushBox : MonoBehaviour
 {
     Rigidbody2D boxBody;
-    public Vector3 originalPos;
     public PlanetSlots[] planetSlots;
+    public GameObject resetPosition;
 
     private void Start()
     {
@@ -35,13 +35,13 @@ public class PushBox : MonoBehaviour
     //to be called, resets the position of the objects
     public void ReturntoOriginalPosition()
     {
-        transform.position = originalPos;
-        GetComponent<CircleCollider2D>().enabled = true;
-        GetComponent<PushBox>().enabled = true;
-
         for (int i = 0; i < planetSlots.Length; ++i)
         {
             planetSlots[i].isRight = false;
         }
+
+        gameObject.transform.position = resetPosition.transform.position;
+        GetComponent<CircleCollider2D>().enabled = true;
+        GetComponent<PushBox>().enabled = true;    
     }
 }

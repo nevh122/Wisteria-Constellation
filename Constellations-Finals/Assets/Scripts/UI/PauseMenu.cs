@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public Canvas UICanvas;
+    public Camera MainCam;
+    public Camera EncounterCam;
+
+    public EncounterSystem encounterSystem;
     public GameObject PauseMenuUI;
     public GameObject player;
     public bool isOpen = false;
@@ -31,7 +36,16 @@ public class PauseMenu : MonoBehaviour
             {
                 ClosePauseMenu();
             }
-        }        
+        }
+        
+        if (encounterSystem.inEncounter == true)
+        {
+            UICanvas.worldCamera = EncounterCam;
+        }
+        else if (encounterSystem.inEncounter == false)
+        {
+            UICanvas.worldCamera = MainCam;
+        }
     }
 
     //to be called by pause menu buttons

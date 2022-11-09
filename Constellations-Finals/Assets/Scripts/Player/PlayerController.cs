@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public Animator playerHealthIndicator;
 
     public PlayerMovement playerMovement;
+    public Rigidbody2D playerRBody;
 
     public bool Sunkey;
     public bool StarKey;
@@ -52,11 +53,13 @@ public class PlayerController : MonoBehaviour
     {
         if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen)
         {
+            playerRBody.constraints = RigidbodyConstraints2D.FreezeAll;
             playerMovement.enabled = false;
             inConvo = true;
         }
         else if (choicesDialogue.isActive == false || dialogueManager.isActive == false || puzzleInput.isOpen == false)
         {
+            playerRBody.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
             playerMovement.enabled = true;
             inConvo = false;
         }

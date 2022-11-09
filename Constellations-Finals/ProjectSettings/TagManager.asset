@@ -5,15 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Indicator
+  - EnPlayer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - No Post
   - Water
   - UI
-  - 
-  - 
+  - Planets
+  - Object Boundaries
   - 
   - 
   - 

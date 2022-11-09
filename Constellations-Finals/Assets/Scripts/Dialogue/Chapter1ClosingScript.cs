@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Closing dialogue for chapter 1 trigger
 public class Chapter1ClosingScript : MonoBehaviour
@@ -33,6 +34,7 @@ public class Chapter1ClosingScript : MonoBehaviour
             player.GetComponent<PlayerController>().enabled = false;
             Transition.SetTrigger("Transition");
             manager.hasInteracted = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
     }
 }

@@ -10,6 +10,7 @@ public class GetMoonKey : MonoBehaviour
     [SerializeField] DialogueBoxElements MoonKeyDialogue;
     DialogueManager dialogueManager;
     [SerializeField] NPCInteractEvent MoonKeyInteractRange;
+    bool hasMoonkey;
 
     private void Start()
     {
@@ -20,9 +21,10 @@ public class GetMoonKey : MonoBehaviour
     //when player interacts with moon key
     private void Update()
     {
-        if(dialogueManager.hasInteracted == true && MoonKeyInteractRange.isInside == true)
+        if(dialogueManager.hasInteracted == true && MoonKeyInteractRange.isInside == true && hasMoonkey == false)
         {
             gameObject.SetActive(false);
+            hasMoonkey = true;
         }
     }
 

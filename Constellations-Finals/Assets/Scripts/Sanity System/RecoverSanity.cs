@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class RecoverSanity : MonoBehaviour
 {
     public PlayerController playerController;
-    public PostProcessVolume sanityEffect;
+    public Volume sanityEffect;
     Vignette anxietyVignette;
 
     private void Start()
     {
-        sanityEffect.profile.TryGetSettings(out anxietyVignette);
+        sanityEffect.profile.TryGet<Vignette>(out anxietyVignette);
     }
     private void Update()
     {

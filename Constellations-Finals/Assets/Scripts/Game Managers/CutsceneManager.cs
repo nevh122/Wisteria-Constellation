@@ -24,10 +24,18 @@ public class CutsceneManager : MonoBehaviour
         StartCoroutine(Transition());
     }
 
-    IEnumerator Transition()
+    public IEnumerator Transition()
     {
         transitionAnim.SetBool("Transition", true);
         yield return new WaitUntil(() => transitionImage.color.a == 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            StartCoroutine(Transition());
+        }
     }
 }
