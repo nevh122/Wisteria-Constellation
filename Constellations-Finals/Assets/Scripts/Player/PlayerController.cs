@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 {
     public float anxietyLevel;
     public bool inConvo = false;
+    public bool teleporting = false;
 
     public float playerlives = 3f;
     public bool playerIsDead = false;
@@ -43,7 +44,7 @@ public class PlayerController : MonoBehaviour
     //called by other scripts when player has died
     public void CheckPlayerDead()
     {
-        if(playerlives == 0 || playerIsDead == true)
+        if(playerlives == 0 || playerIsDead)
         {
             StartCoroutine(PlayerisDeadGotoNextScene());
         }
@@ -51,13 +52,13 @@ public class PlayerController : MonoBehaviour
     }
     public void ControlChecker()
     {
-        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen)
+        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting)
         {
             playerRBody.constraints = RigidbodyConstraints2D.FreezeAll;
             playerMovement.enabled = false;
             inConvo = true;
         }
-        else if (choicesDialogue.isActive == false || dialogueManager.isActive == false || puzzleInput.isOpen == false)
+        else if (!choicesDialogue.isActive || !dialogueManager.isActive || !puzzleInput.isOpen || !teleporting)
         {
             playerRBody.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
             playerMovement.enabled = true;

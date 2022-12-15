@@ -17,7 +17,7 @@ public class Chapter1OpeningScript : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && pauseMenu.isOpen == false)
+        if (Input.GetKeyDown(KeyCode.E) && !pauseMenu.isOpen)
         {
             manager.DisplayNextDialogue();
         }

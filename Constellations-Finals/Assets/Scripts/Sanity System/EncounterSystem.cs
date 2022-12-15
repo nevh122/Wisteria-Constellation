@@ -24,7 +24,7 @@ public class EncounterSystem : MonoBehaviour
 
     public void Update()
     {
-        if(playerController.anxietyLevel == 1 && inEncounter == false)
+        if(playerController.anxietyLevel == 1 && !inEncounter)
         {
             inEncounter = true;
             StartCoroutine(StartEncounter());

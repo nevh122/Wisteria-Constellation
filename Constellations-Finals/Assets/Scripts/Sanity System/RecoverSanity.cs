@@ -9,6 +9,7 @@ public class RecoverSanity : MonoBehaviour
     public PlayerController playerController;
     public Volume sanityEffect;
     Vignette anxietyVignette;
+    public GameObject recoverIndicator;
 
     private void Start()
     {
@@ -26,10 +27,19 @@ public class RecoverSanity : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            if (playerController.inConvo == false)
+            if (!playerController.inConvo)
             {
                 anxietyVignette.intensity.value = anxietyVignette.intensity.value - Time.deltaTime * 0.02f;
+                recoverIndicator.SetActive(true);
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            recoverIndicator.SetActive(false);
         }
     }
 }
