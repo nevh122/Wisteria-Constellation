@@ -22,6 +22,7 @@ public class EncounterSystem : MonoBehaviour
     public GameObject Enemy1, Enemy2;
     public GameObject Espawn1, Espawn2;
 
+    public GameObject MainBG, EncBG;
     public void Update()
     {
         if(playerController.anxietyLevel == 1 && !inEncounter)
@@ -31,23 +32,36 @@ public class EncounterSystem : MonoBehaviour
         }
     }
 
-    IEnumerator StartEncounter()
+    //disables main game components for encounter game to start
+    private void DisableMain()
     {
+        MainBG.SetActive(false);
         Player.gameObject.GetComponent<PlayerController>().enabled = false;
         Player.gameObject.GetComponent<PlayerMovement>().enabled = false;
         Player.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        transitionAnim.SetBool("Transition", true);
-        yield return new WaitUntil(() => transitionImage.color.a == 1);
-        mainCam.enabled = false;
-        encounterPlayer.SetActive(true);
+    }
+
+    //refreshes encounter elements every start
+    private void RefreshEncounter()
+    {
         Enemy1.transform.position = Espawn1.transform.position;
         Enemy2.transform.position = Espawn2.transform.position;
         encounterPlayer.transform.position = EPSpawn.transform.position;
+    }
+
+    //starts the encounter and calls other functions
+    IEnumerator StartEncounter()
+    {
+        transitionAnim.SetBool("Transition", true);
+        DisableMain();
+        yield return new WaitUntil(() => transitionImage.color.a == 1);
+        mainCam.enabled = false;
+        encounterPlayer.SetActive(true);
+        RefreshEncounter();
         encounterCam.enabled = true;
         transitionAnim.SetBool("Transition", false);
+        EncBG.SetActive(true);
         encounterPlayer.GetComponent<PlayerMovement>().enabled = true;
         encounterPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
-
-
 }

@@ -14,6 +14,8 @@ public class RoomTeleport : MonoBehaviour
     public Animator transitionAnim;
     public Image transitionImage;
 
+    public AudioSource teleportSound;
+
     public void Start()
     {
         playerRbody = Player.GetComponent<Rigidbody2D>();
@@ -25,6 +27,7 @@ public class RoomTeleport : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            teleportSound.Play();
             StartCoroutine(StartTeleport());
         }
     }

@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
     public Animator playerAnim;
 
+    public AudioSource runLeft;
+    public AudioSource runRight;
+
     public void Update()
     {
         Move();
@@ -42,5 +45,15 @@ public class PlayerMovement : MonoBehaviour
         playerAnim.SetBool("IsMoving", direction.magnitude > 0);
 
         GetComponent<Rigidbody2D>().velocity = moveSpeed * direction;
+    }
+
+    public void RunLeft()
+    {
+        runLeft.Play();
+    }
+
+    public void RunRight()
+    {
+        runRight.Play();
     }
 }
