@@ -10,6 +10,7 @@ public class GetSunKey : MonoBehaviour
     PlayerController playerController;
     SpriteRenderer BoxSprite;
     public Sprite BoxIsOpenSprite;
+    public AudioSource itemPickUp;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class GetSunKey : MonoBehaviour
         {
             BoxSprite.sprite = BoxIsOpenSprite;
             playerController.inventoryText.text += "\n - Sun Key";
+            itemPickUp.Play();
             playerController.Sunkey = true;
         }
     }

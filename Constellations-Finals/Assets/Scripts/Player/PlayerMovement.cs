@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//Handles player movement and possibly animation in the future
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
@@ -17,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
+    //Handles movement and animation for player
     public void Move()
     {
         Vector2 direction = Vector2.zero;
@@ -47,11 +47,11 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = moveSpeed * direction;
     }
 
+    //Plays audio when player moves
     public void RunLeft()
     {
         runLeft.Play();
     }
-
     public void RunRight()
     {
         runRight.Play();

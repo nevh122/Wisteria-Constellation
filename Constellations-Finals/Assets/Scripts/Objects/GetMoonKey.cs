@@ -11,6 +11,7 @@ public class GetMoonKey : MonoBehaviour
     DialogueManager dialogueManager;
     [SerializeField] NPCInteractEvent MoonKeyInteractRange;
     bool hasMoonkey;
+    public AudioSource itemPickUp;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class GetMoonKey : MonoBehaviour
     {
         dialogueManager.StartDialogue(MoonKeyDialogue);
         playerController.MoonKey = true;
+        itemPickUp.Play();
         playerController.inventoryText.text += "\n - Moon Key";
     }
 }

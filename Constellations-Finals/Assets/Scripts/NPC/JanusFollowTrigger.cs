@@ -8,6 +8,7 @@ public class JanusFollowTrigger : MonoBehaviour
     [SerializeField] GameObject JanusInteractionRange;
     NPCInteractEvent JanusInteractEvent;
     PlayerController playerController;
+    public AudioSource itemPickUp;
     
     bool isFollowing = false;
 
@@ -26,6 +27,7 @@ public class JanusFollowTrigger : MonoBehaviour
             GetComponent<FollowPlayer>().enabled = true;
             GetComponent<CircleCollider2D>().enabled = false;
             JanusInteractionRange.SetActive(false);
+            itemPickUp.Play();
             playerController.inventoryText.text += "\n - Janus";
             playerController.WithJanus = true;
             isFollowing = true;

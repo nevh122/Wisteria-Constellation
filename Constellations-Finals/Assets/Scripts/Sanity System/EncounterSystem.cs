@@ -49,6 +49,14 @@ public class EncounterSystem : MonoBehaviour
         encounterPlayer.transform.position = EPSpawn.transform.position;
     }
 
+    //enables encounter elements at start
+    private void EncounterElems()
+    {
+        EncBG.SetActive(true);
+        encounterPlayer.GetComponent<PlayerMovement>().enabled = true;
+        encounterPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+    }
+
     //starts the encounter and calls other functions
     IEnumerator StartEncounter()
     {
@@ -60,8 +68,6 @@ public class EncounterSystem : MonoBehaviour
         RefreshEncounter();
         encounterCam.enabled = true;
         transitionAnim.SetBool("Transition", false);
-        EncBG.SetActive(true);
-        encounterPlayer.GetComponent<PlayerMovement>().enabled = true;
-        encounterPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+        EncounterElems();
     }
 }

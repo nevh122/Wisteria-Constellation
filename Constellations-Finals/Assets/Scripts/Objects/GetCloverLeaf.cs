@@ -9,6 +9,7 @@ public class GetCloverLeaf : MonoBehaviour
     [SerializeField] DialogueBoxElements CloverLeafDialogue;
     DialogueManager dialogueManager;
     [SerializeField] NPCInteractEvent CloverLeafInteractRange;
+    public AudioSource itemPickUp;
 
     //When player interacts with clover leaf
     private void Start()
@@ -29,6 +30,7 @@ public class GetCloverLeaf : MonoBehaviour
     {
         dialogueManager.StartDialogue(CloverLeafDialogue);
         playerController.CloverLeaf = true;
+        itemPickUp.Play();
         playerController.inventoryText.text += "\n - Clover Leaf";
     }
 }

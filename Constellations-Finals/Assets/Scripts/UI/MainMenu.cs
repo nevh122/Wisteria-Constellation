@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     public Image transitionImage;
     public GameObject MenuButtons;
     public GameObject HowToPlay;
-
+    public AudioSource buttonPressed;
     //to be called by buttons in main menu screen
     private void Start()
     {
@@ -45,5 +45,10 @@ public class MainMenu : MonoBehaviour
         transitionAnim.SetBool("Transition", true);
         yield return new WaitUntil(() => transitionImage.color.a == 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ButtonPressed()
+    {
+        buttonPressed.Play();
     }
 }

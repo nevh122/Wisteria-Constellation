@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float anxietyLevel;
     public bool inConvo = false;
     public bool teleporting = false;
+    public GameObject anxietyHeartbeats;
 
     public float playerlives = 3f;
     public bool playerIsDead = false;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
         CheckPlayerDead();
         ControlChecker();
         PlayerLives();
+        AnxietyIndicator();
     }
     //called by other scripts when player has died
     public void CheckPlayerDead()
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+    //checks if player should have control on specific scenarios
     public void ControlChecker()
     {
         if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting)
@@ -65,6 +68,7 @@ public class PlayerController : MonoBehaviour
             inConvo = false;
         }
     }
+    //changes the screen color when player health is low
     public void PlayerLives()
     {
         switch (playerlives)
@@ -83,6 +87,19 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+    //starts heartbeats sounds when player reach a certain treshhold
+    public void AnxietyIndicator()
+    {
+        if(anxietyLevel >= 0.5f)
+        {
+            anxietyHeartbeats.SetActive(true);
+        }
+        else
+        {
+            anxietyHeartbeats.SetActive(false);
+        }
+    }
+    //what happens when the player has 0 hp left
     IEnumerator PlayerisDeadGotoNextScene()
     {
         DeathTransition.SetBool("Transition", true);

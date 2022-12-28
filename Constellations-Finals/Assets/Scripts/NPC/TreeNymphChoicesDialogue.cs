@@ -10,6 +10,7 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
     ChoicesDialogue TreeNymphChoicesDialogueScript;
     DialogueManager dialogueManager;
     bool KillPlayer = false;
+    public AudioSource itemPickUp;
 
     private void Start()
     {
@@ -48,6 +49,7 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
             DefaultDialogue.dialogue = YesDialogueChange;
             playerController.inventoryText.text += "\n - Star Key";
             playerController.StarKey = true;
+            itemPickUp.Play();
             dialogueManager.hasInteracted = false;
         }
         else

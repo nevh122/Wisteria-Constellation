@@ -9,6 +9,7 @@ public class ConnectingScenes : MonoBehaviour
 {
     public Animator transitionAnim;
     public Image transitionImage;
+    public AudioSource buttonPressed;
     public int retryLoad;
     public int menuLoad;
     int sceneToLoad;
@@ -16,11 +17,13 @@ public class ConnectingScenes : MonoBehaviour
     public void Retry()
     {
         sceneToLoad = retryLoad;
+        buttonPressed.Play();
         StartCoroutine(Transition());
     }
     public void ReturnToMenu()
     {
         sceneToLoad = menuLoad;
+        buttonPressed.Play();
         StartCoroutine(Transition());
     }
 

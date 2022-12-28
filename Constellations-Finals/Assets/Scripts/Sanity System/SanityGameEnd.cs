@@ -20,6 +20,7 @@ public class SanityGameEnd : MonoBehaviour
     public Volume sanityEffect;
     Vignette anxietyVignette;
 
+    public GameObject MainBG, EncBG;
     private void Start()
     {
         sanityEffect.profile.TryGet<Vignette>(out anxietyVignette);
@@ -33,21 +34,44 @@ public class SanityGameEnd : MonoBehaviour
         }
     }
 
-    IEnumerator PlayerEscape()
+    //stops elements of the encounter
+    public void StopEncounter()
     {
         EnPlayer.SetActive(false);
         EnPlayer.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        EncBG.SetActive(false);
+    }
+
+    //changes values of objects when the encounter is finished
+    public void ChangeAnxietyValuesy()
+    {
+        Player.GetComponent<PlayerController>().anxietyLevel = 0f;
+        anxietyVignette.intensity.value = 0f;
+        encounterSystem.inEncounter = false;
+    }
+
+    //activates main game elements
+    public void ReturnToMainGame()
+    {
+        Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+        Player.GetComponent<PlayerController>().enabled = true;
+        Player.GetComponent<PlayerMovement>().enabled = true;
+    }
+
+    public IEnumerator PlayerEscape()
+    {
+        StopEncounter();
+
         transitionAnim.SetBool("Transition", true);
         yield return new WaitUntil(() => transitionImage.color.a == 1);
         encounterCam.enabled = false;
 
-        Player.GetComponent<PlayerController>().anxietyLevel = 0f;
-        anxietyVignette.intensity.value = 0f;
-        encounterSystem.inEncounter = false;
+        ChangeAnxietyValuesy();
+ 
         mainCam.enabled = true;
-        Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-        Player.GetComponent<PlayerController>().enabled = true;
-        Player.GetComponent<PlayerMovement>().enabled = true;
+
+        ReturnToMainGame();
+
         transitionAnim.SetBool("Transition", false);
     }
 }

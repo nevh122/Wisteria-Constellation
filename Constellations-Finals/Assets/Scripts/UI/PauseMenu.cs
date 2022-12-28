@@ -15,6 +15,9 @@ public class PauseMenu : MonoBehaviour
     public bool isOpen = false;
     public int buildIndex;
     CodePuzzleInput puzzleInput;
+
+    public AudioSource openPauseMenu;
+    public AudioSource closePauseMenu;
     private void Start()
     {
         puzzleInput = FindObjectOfType<CodePuzzleInput>();
@@ -55,6 +58,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         PauseMenuUI.SetActive(true);
         player.GetComponent<PlayerMovement>().enabled = false;
+        openPauseMenu.Play();
     }
     public void ClosePauseMenu()
     {
@@ -62,6 +66,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         PauseMenuUI.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
+        closePauseMenu.Play();
     }
     public void QuitToMenu()
     {
