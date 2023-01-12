@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
     public PlayerMovement playerMovement;
     public Rigidbody2D playerRBody;
 
-    public bool Sunkey;
-    public bool StarKey;
+    public bool Labyrinthkey;
+    public bool MapleKey;
     public bool WithJanus;
-    public bool MoonKey;
+    public bool GalaxyKey;
     public bool CloverLeaf;
 
     public TextMeshProUGUI inventoryText;
@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     public DialogueManager dialogueManager;
     public CodePuzzleInput puzzleInput;
 
+    public AudioSource runLeft;
+    public AudioSource runRight;
     void Update()
     {
         anxietyLevel = Mathf.Clamp(anxietyLevel, 0f, 1f);
@@ -107,5 +109,30 @@ public class PlayerController : MonoBehaviour
         this.enabled = false;
         yield return new WaitUntil(() => transitionImage.color.a == 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    //Plays audio when player moves
+    public void RunLeft()
+    {
+        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting)
+        {
+            runLeft.Stop();
+        }
+        else
+        {
+            runLeft.Play();
+        }
+    }
+    public void RunRight()
+    {
+        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting)
+        {
+            runRight.Stop();
+        }
+        else
+        {
+            runRight.Play();
+        }
+            
     }
 }

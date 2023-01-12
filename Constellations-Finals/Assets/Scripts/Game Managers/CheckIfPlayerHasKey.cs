@@ -33,24 +33,24 @@ public class CheckIfPlayerHasKey : MonoBehaviour
     //to be called by a specific door
     public void SunKey()
     {
-        if (playerController.Sunkey == true)
+        if (playerController.Labyrinthkey == true)
         {
             gameObject.GetComponent<RoomTeleport>().enabled = true;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
-        else if (playerController.Sunkey == false)
+        else if (playerController.Labyrinthkey == false)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogueIfLocked);
         }
     }
     public void StarKey()
     {
-        if (playerController.StarKey == true)
+        if (playerController.MapleKey == true)
         {
             gameObject.GetComponent<RoomTeleport>().enabled = true;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
-        else if (playerController.StarKey == false)
+        else if (playerController.MapleKey == false)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogueIfLocked);
         }
@@ -69,12 +69,12 @@ public class CheckIfPlayerHasKey : MonoBehaviour
     }
     public void MoonKey()
     {
-        if (playerController.MoonKey== true)
+        if (playerController.GalaxyKey== true)
         {
             gameObject.GetComponent<RoomTeleport>().enabled = true;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
-        else if (playerController.MoonKey == false)
+        else if (playerController.GalaxyKey == false)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogueIfLocked);
         }

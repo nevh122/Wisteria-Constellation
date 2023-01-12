@@ -32,8 +32,8 @@ public class GetMoonKey : MonoBehaviour
     public void GiveMoonKey()
     {
         dialogueManager.StartDialogue(MoonKeyDialogue);
-        playerController.MoonKey = true;
+        playerController.GalaxyKey = true;
         itemPickUp.Play();
-        playerController.inventoryText.text += "\n - Moon Key";
+        playerController.inventoryText.text += "\n - Galaxy Key";
     }
 }

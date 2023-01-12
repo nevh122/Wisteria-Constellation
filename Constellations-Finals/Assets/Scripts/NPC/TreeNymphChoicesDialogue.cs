@@ -47,8 +47,8 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
             dialogueManager.StartDialogue(YesCloverLeaf);
             TreeNymphChoicesDialogueScript.hasPicked = true;
             DefaultDialogue.dialogue = YesDialogueChange;
-            playerController.inventoryText.text += "\n - Star Key";
-            playerController.StarKey = true;
+            playerController.inventoryText.text += "\n - Maple Key";
+            playerController.MapleKey = true;
             itemPickUp.Play();
             dialogueManager.hasInteracted = false;
         }

@@ -22,7 +22,7 @@ public class GetSunKey : MonoBehaviour
     //when player interacts with sun key
     void Update()
     {
-        if(playerController.Sunkey == false)
+        if(playerController.Labyrinthkey == false)
         {
             GiveSunKey();
         }
@@ -33,9 +33,9 @@ public class GetSunKey : MonoBehaviour
         if(MazeChest.CodeIsCorrect == true)
         {
             BoxSprite.sprite = BoxIsOpenSprite;
-            playerController.inventoryText.text += "\n - Sun Key";
+            playerController.inventoryText.text += "\n - Labyrinth Key";
             itemPickUp.Play();
-            playerController.Sunkey = true;
+            playerController.Labyrinthkey = true;
         }
     }
 }   
