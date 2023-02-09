@@ -11,6 +11,7 @@ public class GetCloverLeaf : MonoBehaviour
     DialogueManager dialogueManager;
     [SerializeField] NPCInteractEvent CloverLeafInteractRange;
     public AudioSource itemPickUp;
+    private bool CheckCloverLeaf = false;
 
     //When player interacts with clover leaf
     private void Start()
@@ -21,8 +22,10 @@ public class GetCloverLeaf : MonoBehaviour
 
     private void Update()
     {
-        if (dialogueManager.hasInteracted == true && CloverLeafInteractRange.isInside == true)
+        if (dialogueManager.hasInteracted == true && playerController.CloverLeaf == true && CheckCloverLeaf == true)
         {
+            CheckCloverLeaf = false;
+            itemPickUp.Play();
             gameObject.SetActive(false);
         }
     }
@@ -31,17 +34,14 @@ public class GetCloverLeaf : MonoBehaviour
     {
         if(playerController.CloverLeaf == false)
         {
+            CheckCloverLeaf = true;
             dialogueManager.StartDialogue(CloverLeafDialogue);
             playerController.CloverLeaf = true;
-            
-            if(dialogueManager.hasInteracted == true)
-            {
-                itemPickUp.Play();
-                playerController.inventoryText.text += "\n - Clover Leaf";
-            }
+            playerController.inventoryText.text += "\n - Clover Leaf";
         }
-        else if (playerController.CloverLeaf == false)
+        else if (playerController.CloverLeaf == true)
         {
+            CheckCloverLeaf = false;
             dialogueManager.StartDialogue(WhenPlayerHasCloverAlready);
         }
     }

@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 public class EPromptBlink : MonoBehaviour
 {
-    public TextMeshProUGUI ePrompt;
+    public Image ePrompt;
     public Image Arrow;
 
     public float FadeInTime = 0.5f;

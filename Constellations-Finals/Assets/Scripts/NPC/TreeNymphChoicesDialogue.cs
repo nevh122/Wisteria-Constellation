@@ -11,6 +11,7 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
     DialogueManager dialogueManager;
     bool KillPlayer = false;
     public AudioSource itemPickUp;
+    private bool CheckifHaveMapleKey = false;
 
     private void Start()
     {
@@ -37,6 +38,12 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
             playerController.playerIsDead = true;
             dialogueManager.hasInteracted = false;
         }
+        //Music Play on item pickup
+        if(dialogueManager.hasInteracted == true && playerController.MapleKey == true && CheckifHaveMapleKey == true)
+        {
+            CheckifHaveMapleKey = false;
+            itemPickUp.Play();
+        }
     }
 
     //When choosing yes
@@ -47,9 +54,9 @@ public class TreeNymphChoicesDialogue : MonoBehaviour
             dialogueManager.StartDialogue(YesCloverLeaf);
             TreeNymphChoicesDialogueScript.hasPicked = true;
             DefaultDialogue.dialogue = YesDialogueChange;
+            CheckifHaveMapleKey = true;
             playerController.inventoryText.text += "\n - Maple Key";
             playerController.MapleKey = true;
-            itemPickUp.Play();
             dialogueManager.hasInteracted = false;
         }
         else
