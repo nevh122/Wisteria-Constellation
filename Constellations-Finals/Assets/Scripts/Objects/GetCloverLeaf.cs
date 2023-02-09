@@ -7,6 +7,7 @@ public class GetCloverLeaf : MonoBehaviour
 {
     PlayerController playerController;
     [SerializeField] DialogueBoxElements CloverLeafDialogue;
+    [SerializeField] DialogueBoxElements WhenPlayerHasCloverAlready;
     DialogueManager dialogueManager;
     [SerializeField] NPCInteractEvent CloverLeafInteractRange;
     public AudioSource itemPickUp;
@@ -28,9 +29,20 @@ public class GetCloverLeaf : MonoBehaviour
 
     public void GiveCloverLeaf()
     {
-        dialogueManager.StartDialogue(CloverLeafDialogue);
-        playerController.CloverLeaf = true;
-        itemPickUp.Play();
-        playerController.inventoryText.text += "\n - Clover Leaf";
+        if(playerController.CloverLeaf == false)
+        {
+            dialogueManager.StartDialogue(CloverLeafDialogue);
+            playerController.CloverLeaf = true;
+            
+            if(dialogueManager.hasInteracted == true)
+            {
+                itemPickUp.Play();
+                playerController.inventoryText.text += "\n - Clover Leaf";
+            }
+        }
+        else if (playerController.CloverLeaf == false)
+        {
+            dialogueManager.StartDialogue(WhenPlayerHasCloverAlready);
+        }
     }
 }
