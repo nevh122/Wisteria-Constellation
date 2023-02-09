@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText, dialogueText;
     public Image NPCIco, NPCIco2;
     private Queue<string> sentences, names;
-    private Queue<Sprite> icons, icons2;
+    private Queue<Sprite> icons;
 
     public bool isDone;
     public bool hasInteracted;
@@ -22,7 +22,6 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         names = new Queue<string>();
         icons = new Queue<Sprite>();
-        icons2 = new Queue<Sprite>();
     }
     public void StartDialogue(DialogueBoxElements dialogue)
     {
@@ -33,7 +32,6 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
         names.Clear();
         icons.Clear();
-        icons2.Clear();
 
         DialogueUI.SetActive(true);
         //Enqueues new dialogue
@@ -49,10 +47,6 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-        foreach (Sprite icon2 in dialogue.NPCSprite2)
-        {
-            icons2.Enqueue(icon2);
-        }
         DisplayNextDialogue();
     }
     public void DisplayNextDialogue()
@@ -66,11 +60,9 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         string name = names.Dequeue();
         Sprite icon = icons.Dequeue();
-        Sprite icon2 = icons2.Dequeue();
         dialogueText.text = sentence;
         nameText.text = name;
         NPCIco.sprite = icon;
-        NPCIco2.sprite = icon2;
     }
 
     //to use by other scripts if the dialogue is done
