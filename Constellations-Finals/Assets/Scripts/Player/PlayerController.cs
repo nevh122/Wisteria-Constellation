@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public bool inConvo = false;
     public bool teleporting = false;
     public GameObject anxietyHeartbeats;
+    public EncounterSystem encounterSystem;
 
     public float playerlives = 3f;
     public bool playerIsDead = false;
@@ -57,13 +58,13 @@ public class PlayerController : MonoBehaviour
     //checks if player should have control on specific scenarios
     public void ControlChecker()
     {
-        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting)
+        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting || encounterSystem.inEncounter)
         {
             playerRBody.constraints = RigidbodyConstraints2D.FreezeAll;
             playerMovement.enabled = false;
             inConvo = true;
         }
-        else if (!choicesDialogue.isActive || !dialogueManager.isActive || !puzzleInput.isOpen || !teleporting)
+        else if (!choicesDialogue.isActive || !dialogueManager.isActive || !puzzleInput.isOpen || !teleporting || !encounterSystem.inEncounter)
         {
             playerRBody.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
             playerMovement.enabled = true;
@@ -114,7 +115,7 @@ public class PlayerController : MonoBehaviour
     //Plays audio when player moves
     public void RunLeft()
     {
-        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting)
+        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting || encounterSystem.inEncounter)
         {
             runLeft.Stop();
         }
@@ -125,7 +126,7 @@ public class PlayerController : MonoBehaviour
     }
     public void RunRight()
     {
-        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting)
+        if (choicesDialogue.isActive || dialogueManager.isActive || puzzleInput.isOpen || teleporting || encounterSystem.inEncounter)
         {
             runRight.Stop();
         }

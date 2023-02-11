@@ -13,6 +13,7 @@ public class Chapter1ClosingScript : MonoBehaviour
     public bool isInside = false;
     PlayerMovement playerMovement;
     public GameObject player;
+
     private void Start()
     {
         manager = FindObjectOfType<DialogueManager>();

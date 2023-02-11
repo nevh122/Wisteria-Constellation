@@ -26,6 +26,7 @@ public class GetMoonKey : MonoBehaviour
         {
             gameObject.SetActive(false);
             hasMoonkey = true;
+            itemPickUp.Play();
         }
     }
 
@@ -33,7 +34,6 @@ public class GetMoonKey : MonoBehaviour
     {
         dialogueManager.StartDialogue(MoonKeyDialogue);
         playerController.GalaxyKey = true;
-        itemPickUp.Play();
         playerController.inventoryText.text += "\n - Galaxy Key";
     }
 }
