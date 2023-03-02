@@ -29,7 +29,6 @@ public class Chapter1ClosingScript : MonoBehaviour
     {
         if (thisScript && manager.isDone && manager.hasInteracted)
         {
-            GetComponent<NPCInteractEvent>().enabled = false;
             playerMovement.playerAnim.SetBool("IsMoving", false);
             player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             player.GetComponent<PlayerController>().enabled = false;

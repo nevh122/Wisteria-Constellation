@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public bool WithJanus;
     public bool GalaxyKey;
     public bool CloverLeaf;
+    public bool LakeKey;
+    public bool Boots;
 
     public TextMeshProUGUI inventoryText;
     public Animator DeathTransition;
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
         ControlChecker();
         PlayerLives();
         AnxietyIndicator();
+        RunWithBoots();
     }
     //called by other scripts when player has died
     public void CheckPlayerDead()
@@ -135,5 +138,18 @@ public class PlayerController : MonoBehaviour
             runRight.Play();
         }
             
+    }
+
+    //handles boots movement
+    public void RunWithBoots()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Boots == true)
+        {
+            playerMovement.moveSpeed = playerMovement.moveSpeed + 4f;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift) && Boots == true)
+        {
+            playerMovement.moveSpeed = playerMovement.moveSpeed - 4f;
+        }
     }
 }
