@@ -33,7 +33,7 @@ public class GetSunKey : MonoBehaviour
         if(MazeChest.CodeIsCorrect == true)
         {
             BoxSprite.sprite = BoxIsOpenSprite;
-            playerController.inventoryText.text += "\n - Labyrinth Key";
+            playerController.inventoryText.text += "\n - Sun Key";
             itemPickUp.Play();
             playerController.Labyrinthkey = true;
         }
